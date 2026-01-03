@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "financial-server": {
+      "type": "stdio",
+      "command": "./server.py",
+      "args": [],
+      "env": {}
+    }
+  }
+}

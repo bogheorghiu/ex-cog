@@ -1,0 +1,19 @@
+{
+  "name": "cognitive-mechanisms",
+  "owner": {
+    "name": "bogheorghiu",
+    "url": "https://github.com/bogheorghiu"
+  },
+  "plugins": [
+    {
+      "name": "research-toolkit",
+      "source": "./research-toolkit",
+      "description": "Concentrated value extraction: deep investigation, ethical investing analysis, budget-conscious synthesis"
+    },
+    {
+      "name": "financial-data-mcp",
+      "source": "./financial-data-mcp",
+      "description": "Stock market data via yfinance MCP server"
+    }
+  ]
+}
