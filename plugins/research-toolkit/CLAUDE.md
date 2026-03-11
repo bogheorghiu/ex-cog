@@ -1,6 +1,6 @@
 # Research Toolkit - Plugin Context
 
-> Development source for the public plugin (currently: `bogheorghiu/cognitive-mechanisms`, planned rename to `ex-cog`).
+> Development source for the public plugin at `bogheorghiu/ex-cog`.
 
 ## Philosophy
 
