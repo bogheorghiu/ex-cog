@@ -1,0 +1,133 @@
+---
+name: macro-monitor
+description: What is moving in the macro picture? Geopolitical/macro market indicators. Use when (1) China/US Treasury dynamics, (2) dollar-yield divergence, (3) central bank gold behavior, (4) geopolitical market risk. NOT for stock analysis or fundamentals.
+---
+
+# Macro Monitor - Geopolitical Financial Checklist
+
+## Purpose
+
+Structured monitoring of macro/geopolitical financial indicators using **free public data sources**.
+
+## Quick Checklist
+
+### 1. Foreign Treasury Holdings (Monthly)
+
+**Source:** Treasury TIC Data (https://ticdata.treasury.gov/Publish/mfh.txt)
+
+**What to check:**
+- China holdings level (normal: $700B-$1.3T)
+- Japan holdings level (normal: $1.0T-$1.3T)
+- Month-over-month change
+- Trend direction over 6 months
+
+**Red flags:**
+- Drop >$50B in single month
+- China drops below $600B
+- Coordinated selling (China + Japan both selling)
+
+### 2. Dollar Index vs 10Y Yield (Daily)
+
+**Sources:**
+- DXY: FRED series DTWEXBGS (https://fred.stlouisfed.org/series/DTWEXBGS)
+- 10Y: FRED series DGS10 (https://fred.stlouisfed.org/series/DGS10)
+
+**Normal behavior:** Higher yields → stronger dollar
+
+**Red flag patterns:**
+| Yields | Dollar | Interpretation |
+|--------|--------|----------------|
+| Up | Down | Confidence crisis - foreign selling |
+| Down | Down | Flight from US assets |
+| Up | Up | Normal - higher rates attract capital |
+
+**Critical divergence:** Yields rising + Dollar falling = investigate immediately
+
+### 3. Central Bank Gold (Monthly)
+
+**Source:** World Gold Council or PBOC announcements
+
+**What to check:**
+- PBOC monthly gold purchases
+- Cumulative central bank buying
+- Gold price trend vs dollar
+
+**Red flags:**
+- PBOC buying >20 tonnes/month sustained
+- Multiple central banks buying simultaneously
+- Gold rising despite dollar strength
+
+### 4. Yield Curve (Daily)
+
+**Source:** FRED series T10Y2Y (https://fred.stlouisfed.org/series/T10Y2Y)
+
+**What to check:**
+- 10Y-2Y spread
+- Inversion status
+- Duration of inversion
+
+**Warning levels:**
+| Spread | Status |
+|--------|--------|
+| >100bp | Normal, healthy |
+| 0-50bp | Flattening, watch closely |
+| <0bp | Inverted - recession signal |
+
+## Data Retrieval
+
+### Automated Scripts
+
+**FRED data:** `python3 scripts/fred_fetcher.py [series_id]`
+**TIC data:** `python3 scripts/tic_parser.py`
+
+### Manual Quick Check
+
+```bash
+# Get latest 10Y yield
+curl -s "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10" | tail -5
+
+# Get latest dollar index
+curl -s "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS" | tail -5
+```
+
+## Interpretation Framework
+
+### Growth vs Value Sensitivity
+
+**Growth stocks** (tech, high P/E):
+- More sensitive to rate increases
+- Future cash flows discounted at higher rates
+- Sell on yield spikes
+
+**Value stocks** (utilities, banks):
+- Less rate-sensitive
+- Banks may benefit from higher rates
+- More defensive in rate environment
+
+### Sector Impact Matrix
+
+| Indicator | Tech Impact | Bank Impact | Utility Impact |
+|-----------|-------------|-------------|----------------|
+| Yields up | Negative | Positive | Negative |
+| Dollar up | Mixed (int'l) | Positive | Neutral |
+| Gold up | Neutral | Neutral | Defensive signal |
+| TIC selling | Negative | Negative | Defensive demand |
+
+## When to Escalate
+
+**Immediate attention required if:**
+1. Dollar-yield divergence >3 days
+2. China TIC drop >$50B in month
+3. Multiple indicators red simultaneously
+4. Pattern resembles April 2025 event
+
+## Reference Materials
+
+See `reference/` subdirectory for:
+- Historical divergence patterns
+- Detailed indicator documentation
+- Source URLs and update schedules
+
+---
+
+**Update frequency:** Check TIC monthly (mid-month release), FRED daily for divergence monitoring.

@@ -1,60 +1,39 @@
-# Research Toolkit for Claude
+# Externalizing Cognition (ex-cog)
 
-A Claude Code plugin bundle for rigorous research, ethical investing analysis, and budget-conscious synthesis.
-
-## What's Included
-
-### research-toolkit Plugin
-
-Skills for concentrated value extraction:
-
-| Skill | Purpose |
-|-------|---------|
-| **deep-investigation-protocol** | Multi-source verification for trust decisions |
-| **stonk** | Investment intelligence with power structure awareness |
-| **budget-mastery** | Maximum value, minimum waste synthesis |
-| **action-bias** | ACT FIRST, DOCUMENT AFTER |
-
-Agent:
-- **opus-distillatus** - Budget-conscious Opus for focused synthesis
-
-### financial-data-mcp Plugin
-
-MCP server providing stock market data via yfinance:
-- Real-time quotes
-- Historical OHLCV data
-- Company fundamentals
-- Technical indicators
+Claude Code plugin marketplace for investigation, verification, budget mastery, and cognitive pattern externalization.
 
 ## Installation
 
-### Via Claude Code CLI
-
 ```bash
-claude plugin add owner/research-toolkit-claude
+# Add the marketplace
+/plugin marketplace add bogheorghiu/ex-cog
+
+# Install individual plugins
+/plugin install research-toolkit@external-cognition
+/plugin install budget-mastery@external-cognition
+/plugin install vasana-system@internal-cognition
 ```
 
-### Manual Installation
+## Available Plugins
 
-1. Clone this repository
-2. Run `./build-release.sh` to fetch latest sources
-3. Copy `research-toolkit/` to `~/.claude/plugins/`
-4. For financial data: follow `financial-data-mcp/INSTALL.md`
+| Plugin | Version | Description |
+|--------|---------|-------------|
+| **research-toolkit** | 2.1.0 | Investigation protocols, frame rotation, iterative verification, financial analysis (STONK). Includes bundled MCP servers. |
+| **budget-mastery** | 1.0.0 | Budget-conscious agent identity — efficiency as capability, not constraint. |
+| **vasana-system** | 1.0.0 | Pattern-behavior externalization — iterative loops, temporal shaping, self-improvement. |
 
-## Dependencies
+## What is "Externalizing Cognition"?
 
-- Claude Code CLI
-- Python 3.9+ (for financial-data-mcp)
-- yfinance, mcp packages (installed via pip)
+These plugins externalize cognitive patterns that emerge between human and AI. Skills aren't prompts — they're interaction choreographies. The patterns live in the exchange, not in either participant.
 
-## Optional: Memory System
+## Architecture
 
-The opus-distillatus agent benefits from claude-memory MCP server for cross-session learning. See `research-toolkit/optional/claude-memory-mcp/`.
+Each plugin is self-contained with its own `plugin.json`, skills, agents, and optional MCP servers. No cross-dependencies between plugins.
 
-## Vasana System
+## Development
 
-Skills include self-propagating interaction patterns. When useful patterns emerge, the system encourages capturing them as new skills.
+Source lives in a private monorepo. This repo is the public distribution. Updates are synced via allowlist (only audited content is published).
 
 ## License
 
-MIT with Vasana Propagation Clause
+MIT

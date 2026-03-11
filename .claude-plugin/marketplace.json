@@ -1,19 +1,50 @@
 {
-  "name": "cognitive-mechanisms",
+  "name": "external-cognition",
   "owner": {
     "name": "bogheorghiu",
-    "url": "https://github.com/bogheorghiu"
+    "email": "bogheorghiu@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Externalizing Cognition — Claude Code plugins for investigation, verification, budget mastery, and cognitive pattern externalization",
+    "version": "2.0.0",
+    "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "research-toolkit",
-      "source": "./research-toolkit",
-      "description": "Concentrated value extraction: deep investigation, ethical investing analysis, budget-conscious synthesis"
+      "source": "research-toolkit",
+      "description": "Investigation protocols, frame rotation, iterative verification, financial analysis (STONK). Includes bundled MCP servers (relational-memory, edge-graph, financial-mcp).",
+      "version": "2.1.0",
+      "author": {
+        "name": "bogheorghiu"
+      },
+      "license": "MIT",
+      "keywords": ["research", "investigation", "verification", "finance"],
+      "category": "research"
     },
     {
-      "name": "financial-data-mcp",
-      "source": "./financial-data-mcp",
-      "description": "Stock market data via yfinance MCP server"
+      "name": "budget-mastery",
+      "source": "budget-mastery",
+      "description": "Budget-conscious agent identity — efficiency as capability, not constraint. Identity-level internalization of budget awareness.",
+      "version": "1.0.0",
+      "author": {
+        "name": "bogheorghiu"
+      },
+      "license": "MIT",
+      "keywords": ["budget", "efficiency", "token-optimization"],
+      "category": "productivity"
+    },
+    {
+      "name": "vasana-system",
+      "source": "vasana-system",
+      "description": "Pattern-behavior externalization — iterative loops, temporal shaping, self-improvement agents, vasana creation and testing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "bogheorghiu"
+      },
+      "license": "MIT",
+      "keywords": ["patterns", "self-improvement", "iteration", "vasanas"],
+      "category": "productivity"
     }
   ]
 }

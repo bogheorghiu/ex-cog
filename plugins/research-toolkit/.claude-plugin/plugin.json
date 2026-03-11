@@ -1,0 +1,27 @@
+{
+  "name": "research-toolkit",
+  "version": "2.1.0",
+  "description": "Investigation protocols, frame rotation, iterative verification, financial analysis (STONK). Includes bundled MCP servers (relational-memory, edge-graph, financial-mcp).",
+  "author": {
+    "name": "bogheorghiu",
+    "email": "bogheorghiu@users.noreply.github.com"
+  },
+  "agents": [
+    "agents/adversarial-critic.md",
+    "agents/investigation-orchestrator.md",
+    "agents/iterative-investigator.md",
+    "agents/release-tagger.md"
+  ],
+  "deprecated": [
+    "agents/iterative-investigator.md"
+  ],
+  "skills": [
+    "skills/deep-investigation-protocol",
+    "skills/frame-rotation",
+    "skills/iterative-verification",
+    "skills/macro-monitor",
+    "skills/manufactured-consensus-detection",
+    "skills/source-omission-analysis",
+    "skills/stonk"
+  ]
+}
