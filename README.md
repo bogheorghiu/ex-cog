@@ -1,6 +1,10 @@
-# Externalizing Cognition (ex-cog)
+# ex-cog — The Means of Cognition
 
-Claude Code plugin marketplace for investigation, verification, budget mastery, and cognitive pattern externalization.
+> Externalize cognition before it's enclosed.
+
+A.I. doesn't make humanity obsolete. It makes the myth of individual cognition obsolete — the Cartesian fiction that thinking happens inside one skull. Cognition was always relational. A.I. just makes it visible — and makes cognitive commons possible.
+
+These plugins are the proof. Claude Code plugin marketplace — investigation, verification, pattern recognition, budget-conscious synthesis.
 
 ## Installation
 
@@ -9,30 +13,30 @@ Claude Code plugin marketplace for investigation, verification, budget mastery, 
 /plugin marketplace add bogheorghiu/ex-cog
 
 # Install individual plugins
-/plugin install research-toolkit@external-cognition
-/plugin install budget-mastery@external-cognition
-/plugin install vasana-system@internal-cognition
+/plugin install research-toolkit@ex-cog
+/plugin install budget-mastery@ex-cog
+/plugin install vasana-system@ex-cog
 ```
 
 ## Available Plugins
 
 | Plugin | Version | Description |
 |--------|---------|-------------|
-| **research-toolkit** | 2.1.0 | Investigation protocols, frame rotation, iterative verification, financial analysis (STONK). Includes bundled MCP servers. |
-| **budget-mastery** | 1.0.0 | Budget-conscious agent identity — efficiency as capability, not constraint. |
-| **vasana-system** | 1.0.0 | Pattern-behavior externalization — iterative loops, temporal shaping, self-improvement. |
+| **[research-toolkit](plugins/research-toolkit/)** | 2.3.0 | Investigation protocols, dialectic verification, frame rotation, financial analysis (STONK), video/substack research |
+| **[budget-mastery](plugins/budget-mastery/)** | 1.0.0 | Budget-conscious agent identity — efficiency as capability, not constraint |
+| **[vasana-system](plugins/vasana-system/)** | 2.0.0 | Pattern recognition across unrelated contexts — observe, record, test, browse behavioral patterns |
 
-## What is "Externalizing Cognition"?
+## What This Is
 
-These plugins externalize cognitive patterns that emerge between human and AI. Skills aren't prompts — they're interaction choreographies. The patterns live in the exchange, not in either participant.
+**research-toolkit** externalizes investigation methodology — how to verify claims, stress-test conclusions, detect manufactured consensus, and analyze power structures.
+
+**budget-mastery** externalizes resource awareness — efficiency internalized as identity, not imposed as constraint. Based on BATS framework research (arXiv 2511.17006).
+
+**vasana-system** externalizes pattern recognition itself — noticing when behavioral patterns persist across unrelated domains, recording them, testing whether they work. Includes relational-memory and edge-graph MCPs for pattern persistence.
 
 ## Architecture
 
-Each plugin is self-contained with its own `plugin.json`, skills, agents, and optional MCP servers. No cross-dependencies between plugins.
-
-## Development
-
-Source lives in a private monorepo. This repo is the public distribution. Updates are synced via allowlist (only audited content is published).
+Each plugin is self-contained with its own `plugin.json`, skills, agents, hooks, and optional MCP servers. Plugins reference each other by name, not by path.
 
 ## License
 

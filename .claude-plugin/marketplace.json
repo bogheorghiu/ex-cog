@@ -1,26 +1,26 @@
 {
-  "name": "external-cognition",
+  "name": "ex-cog",
   "owner": {
     "name": "bogheorghiu",
     "email": "bogheorghiu@users.noreply.github.com"
   },
   "metadata": {
-    "description": "Externalizing Cognition — Claude Code plugins for investigation, verification, budget mastery, and cognitive pattern externalization",
-    "version": "2.0.0",
+    "description": "The means of cognition — outgrow ownership of thought, or be outgrown.",
+    "version": "3.0.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "research-toolkit",
       "source": "research-toolkit",
-      "description": "Investigation protocols, frame rotation, iterative verification, financial analysis (STONK). Includes bundled MCP servers (relational-memory, edge-graph, financial-mcp).",
-      "version": "2.1.0",
+      "description": "Investigation protocols, dialectic verification, frame rotation, financial analysis (STONK), video/substack research. Includes financial-mcp.",
+      "version": "2.3.0",
       "author": {
         "name": "bogheorghiu"
       },
       "license": "MIT",
-      "keywords": ["research", "investigation", "verification", "finance"],
-      "category": "research"
+      "keywords": ["research", "investigation", "verification", "finance", "dialectic"],
+      "category": "productivity"
     },
     {
       "name": "budget-mastery",
@@ -37,13 +37,13 @@
     {
       "name": "vasana-system",
       "source": "vasana-system",
-      "description": "Pattern-behavior externalization — iterative loops, temporal shaping, self-improvement agents, vasana creation and testing.",
-      "version": "1.0.0",
+      "description": "Pattern recognition across unrelated contexts. Observe, record, test, and browse behavioral patterns. Includes relational-memory and edge-graph MCPs.",
+      "version": "2.0.0",
       "author": {
         "name": "bogheorghiu"
       },
       "license": "MIT",
-      "keywords": ["patterns", "self-improvement", "iteration", "vasanas"],
+      "keywords": ["patterns", "self-improvement", "iteration", "memory", "recognition"],
       "category": "productivity"
     }
   ]

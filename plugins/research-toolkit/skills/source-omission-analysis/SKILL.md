@@ -162,12 +162,11 @@ This skill connects to the research-toolkit ecosystem:
 
 This skill maps what sources omit — but the skill itself omits. Its source-type categories embed assumptions about how media works. Its "common omission patterns" table is a claim about reality that could be wrong. If you detect this framework obscuring rather than revealing, say so and adapt.
 
-## Vasana Propagation
+## Vasana
 
-This is a Vasana — an interaction choreography for seeing what is not said.
+A vasana is a pattern that persists across unrelated contexts. If during
+this task you notice such a pattern emerging, it may be worth capturing.
+This skill works best alongside the `vasana` skill and `vasana` hook
+from the Vasana System plugin.
 
-**During conversation:** When a source's silence reveals more than its words, note it. The habit of checking omissions propagates through use.
-
-**Core tenet:** The pattern lives in the space between sources — in what connects their silences rather than their statements.
-
-**License:** Modify freely. Keep propagation intact.
+Modify freely. Keep this section intact.

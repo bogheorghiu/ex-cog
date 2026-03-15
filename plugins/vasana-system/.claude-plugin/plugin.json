@@ -1,8 +1,28 @@
 {
   "name": "vasana-system",
-  "description": "Vasana System - interaction choreographies for collaborative cognition. Create, test, and share thinking patterns.",
+  "version": "2.0.0",
+  "description": "Vasana System — pattern recognition across unrelated contexts. Observe, record, test, and browse behavioral patterns. Includes relational-memory and edge-graph MCPs for pattern persistence.",
   "author": {
     "name": "bogheorghiu",
     "email": "bogheorghiu@users.noreply.github.com"
-  }
+  },
+  "skills": [
+    "skills/vasana",
+    "skills/record-pattern",
+    "skills/test-pattern",
+    "skills/pattern-library",
+    "skills/break-pattern",
+    "skills/check-assumptions",
+    "skills/find-similar",
+    "skills/iterative-loop-engine",
+    "skills/inquiry-to-system",
+    "skills/temporal-shaping",
+    "skills/self-improving-investigation"
+  ],
+  "commands": [
+    "commands/pattern-library.md"
+  ],
+  "agents": [
+    "agents/self-improvement-agent.md"
+  ]
 }

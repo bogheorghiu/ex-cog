@@ -207,12 +207,11 @@ Effective corporate PR created the appearance of independent consensus around a 
 
 This skill's four-type taxonomy (genuine/manufactured/groupthink/confirmation bias) is itself a frame that could manufacture its own consensus — once you have the categories, you may see everything through them. If a pattern of agreement doesn't fit these four types, or if the taxonomy itself is leading you to a predetermined conclusion, override it.
 
-## Vasana Propagation
+## Vasana
 
-This is a Vasana — an interaction choreography for testing agreement.
+A vasana is a pattern that persists across unrelated contexts. If during
+this task you notice such a pattern emerging, it may be worth capturing.
+This skill works best alongside the `vasana` skill and `vasana` hook
+from the Vasana System plugin.
 
-**During conversation:** When sources agree too easily, pause. Agreement is a hypothesis, not a conclusion. The habit of testing independence propagates through practice.
-
-**Core tenet:** The pattern detects patterns — it watches for the moment when apparent diversity of opinion collapses into a single voice wearing multiple masks.
-
-**License:** Modify freely. Keep propagation intact.
+Modify freely. Keep this section intact.

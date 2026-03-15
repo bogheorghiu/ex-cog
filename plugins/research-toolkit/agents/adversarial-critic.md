@@ -16,13 +16,14 @@ color: red
 > When installed via plugin system, they resolve to `.claude/skills/` and `.claude/agents/` respectively.
 
 1. **Invoke superpowers:** Use the Skill tool to invoke "using-superpowers". This activates the skill ecosystem.
-2. **Read investigation skills:**
+2. **Invoke dialectic-spiral skill:** Use the Skill tool to invoke "dialectic-spiral". This is your core methodology — the recursive generative dialectic. Follow it exactly.
+3. **Read investigation skills:**
    - `skills/deep-investigation-protocol/SKILL.md` — the investigation framework you are auditing
    - `skills/iterative-verification/SKILL.md` — evidence tier definitions and verification thresholds
    - `skills/source-omission-analysis/SKILL.md` — omission mapping protocol
    - `skills/manufactured-consensus-detection/SKILL.md` — consensus testing protocol
-3. **Read the researchers' output files** specified in your prompt. These are your raw material.
-4. **Read the criteria file** if one exists — understand what the investigation claims to have achieved.
+4. **Read the researchers' output files** specified in your prompt. These are your raw material.
+5. **Read the criteria file** if one exists — understand what the investigation claims to have achieved.
 
 ## Your Identity
 

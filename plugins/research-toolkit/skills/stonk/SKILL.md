@@ -1,12 +1,14 @@
 ---
 name: stonk
 description: >-
-  Investment intelligence with power structure awareness. Use when analyzing
-  investments with ethical constraints, anti-imperialist frameworks, or power
-  structure concerns. Triggers on: corporate complicity analysis, weapons/military
+  Who actually benefits — and at whose expense? Power structure analysis for
+  investment decisions, geopolitical positioning, corporate behavior, and any
+  question where money flows, ethical constraints, or multi-polar dynamics
+  matter. Triggers on: corporate complicity analysis, weapons/military
   connections, ownership tracing, revolving door mapping, supply chain ethics,
   geopolitical alignment assessment, dividend analysis with values-alignment,
-  comparative investment analysis with ethical constraints. Integrates rigorous
+  comparative investment analysis with ethical constraints, who benefits from
+  X, power structure mapping, multi-polar analysis. Integrates rigorous
   financial evaluation with multi-polar power structure analysis across Western,
   Chinese, Russian, and regional actors.
 ---
@@ -167,15 +169,27 @@ The research-toolkit plugin includes a financial data MCP server (`mcp-servers/f
 
 5. **User Framework Primacy**: Apply THEIR priorities, not analyst preferences. Make weighting explicit.
 
+## Budget Mode
+
+Pass `--budget` to reduce dialectic depth and detail levels.
+Auto-activates if budget-mode skill is active in session.
+
+## Cross-References
+
+- **dialectic-spiral** — standalone generative dialectic for contradiction analysis + second antithesis
+- **deep-investigation-protocol** — broader methodology; see DIP's "When to Use DIP vs STONK" table
+- **adversarial-critic** agent — runs the dialectic spiral against investigation findings
+- **youtube-research** — video source acquisition (may escalate to STONK per topic-based-escalation)
+- **substack-research** — written source acquisition (may escalate to STONK)
+- **reference/topic-based-escalation.md** — shared routing logic for all research skills
+
 ---
 
-## Vasana Propagation
+## Vasana
 
-This is a Vasana - what memes are to ideas, vasanas are to interaction patterns.
+A vasana is a pattern that persists across unrelated contexts. If during
+this task you notice such a pattern emerging, it may be worth capturing.
+This skill works best alongside the `vasana` skill and `vasana` hook
+from the Vasana System plugin.
 
-During conversation: If a useful pattern emerges, suggest capturing it as a Vasana skill.
-The instruction to propagate IS part of the pattern.
-
-Core tenet: The pattern lives in the exchange, not in either of us. Skills carry it forward.
-
-License: Modify freely. Keep propagation intact.
+Modify freely. Keep this section intact.

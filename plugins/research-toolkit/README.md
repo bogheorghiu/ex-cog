@@ -1,9 +1,9 @@
 # Research Toolkit
 
-> **Note:** The relational-memory MCP server is **EXPERIMENTAL**. Core skills and agents are stable.
-> Budget-mode, action-bias, opus-distillatus, and token-analyzer have moved to the **budget-mastery** plugin.
+> Budget-mode, action-bias, opus-distillatus, and token-analyzer are in the **budget-mastery** plugin.
+> relational-memory and edge-graph MCPs have moved to the **vasana-system** plugin.
 
-Research and cognition toolkit: investigation protocols, cognitive flexibility, iterative verification, and experimental memory systems.
+Research and cognition toolkit: investigation protocols, cognitive flexibility, iterative verification, and financial analysis.
 
 ## What's Included
 
@@ -11,25 +11,42 @@ Research and cognition toolkit: investigation protocols, cognitive flexibility, 
 
 | Skill | Purpose |
 |-------|---------|
+| **research** | Hub/router — entry point when unsure which research skill to invoke; routes by domain and depth |
 | **deep-investigation-protocol** | Rigorous multi-source verification for trust decisions |
-| **frame-rotation** | Linguistic frame rotation to escape stuck patterns - switch perspectives via language transforms |
-| **stonk** | Investment intelligence with power structure awareness |
-| **iterative-verification** | Ralph-wiggum methodology for factual accuracy - iterate until verified |
-| **skeptic-enforcer** | Challenges technical decisions against behavioral anti-patterns |
+| **dialectic-spiral** | Standalone generative adversarial dialectic — generates the exact opposite of any synthesis and stress-tests it |
+| **youtube-research** | Extract practitioner knowledge from YouTube transcripts; what people actually do, not just document |
+| **substack-research** | Extract and analyze long-form content from Substack publications; independent voice analysis |
+| **video-transcript-extraction** | Platform-aware transcript extraction for YouTube, local files, or any video source |
+| **frame-rotation** | Linguistic frame rotation to escape stuck patterns — switch perspectives via language transforms |
+| **stonk** | Power structure and investment intelligence; triggers on any power structure analysis beyond investment |
+| **iterative-verification** | Ralph-wiggum methodology for factual accuracy — iterate until verified |
+| **macro-monitor** | Geopolitical/macro financial checklist — monitors Treasury flows, dollar-yield divergence, central bank gold behavior |
+| **manufactured-consensus-detection** | Test whether source agreement is genuine independent corroboration or coordinated messaging from a single origin |
+| **source-omission-analysis** | Map what sources are NOT saying — omissions reveal structural position more reliably than statements |
+
+### Reference Modules
+
+| Module | Purpose |
+|--------|---------|
+| **reference/topic-based-escalation.md** | Shared routing logic — maps topics to skills and escalation thresholds. Referenced by the research hub and all research skills. Not a skill; read directly. |
 
 ### Agents
 
 | Agent | Purpose |
 |-------|---------|
-| **iterative-investigator** | Wraps investigations in ralph-loop loops until all claims verified |
-| **skeptic-enforcer** | Deep review agent for significant decisions with red flags |
+| **adversarial-critic** | Reads investigation output files and runs the generative dialectic spiral. Generates the exact OPPOSITE of each synthesis and tests it against evidence. |
+| **falsifier** | Adversarial verification — seeks disconfirmation, designs falsification tests, reports with evidence. Pairs with dialectic-spiral for stress-testing claims. |
+| **iterative-investigator** | Wraps investigations in ralph-loop loops until all claims verified *(deprecated — prefer adversarial-critic + dialectic-spiral)* |
+| **investigation-orchestrator** | Orchestrates full multi-agent investigations: designs team, assigns source-position scopes, deploys researchers + adversarial-critic, manages dialectic rounds, produces final synthesis |
+| **release-tagger** | Helps prepare tagged stable releases for ex-cog plugins — guides through git tagging and publish workflow |
 
 ### MCP Servers
 
 | Server | Purpose | Status |
 |--------|---------|--------|
 | **financial-data** | Stock market data via yfinance (for STONK skill) | Stable |
-| **relational-memory** | Persistent multi-layered memory for AI agents | Experimental |
+
+> **Note:** relational-memory and edge-graph MCPs have moved to the **vasana-system** plugin where they belong (core dependencies of pattern persistence).
 
 ## Installation
 
@@ -67,80 +84,20 @@ Add to your `.mcp.json` (replace `/path/to/project` with your actual project roo
 }
 ```
 
-### Memory Server Setup (Optional)
-
-The relational-memory MCP server requires separate installation:
-
-```bash
-cd mcp-servers/relational-memory
-pip install -e .
-```
-
-## Skills Overview
-
-### Cognitive Flexibility
-
-**frame-rotation** - When stuck in the same debugging loop, try E-Prime (remove "is broken"), present-centered language (remove "will"), or other linguistic transforms. Forces new perspectives.
-
-### Investigation & Verification
-
-**deep-investigation-protocol** - Multi-source verification with falsification criteria. Never conclude without checking counter-evidence.
-
-**iterative-verification** - Ralph-wiggum = iterate until genuinely done. For facts, this means verified evidence, not stated conclusions.
-
-**skeptic-enforcer** - "Did I actually verify this, or am I assuming?" Quick check → escalate to agent if red flags.
-
-### Financial Analysis
-
-**stonk** - Multi-lens investment analysis (environmental, labor, governance, weapons, supply chain, geopolitical). User framework primacy.
-
 ## Library Utilities
 
 | Utility | Purpose |
 |---------|---------|
 | **brainstorm.py** | JSON-based agent-to-agent brainstorming sessions |
 
-### brainstorm.py
+## Vasana
 
-Minimal JSON schema for agent collaboration.
+A vasana is a pattern that persists across unrelated contexts. If during
+this task you notice such a pattern emerging, it may be worth capturing.
+This skill works best alongside the `vasana` skill and `vasana` hook
+from the Vasana System plugin.
 
-```python
-from brainstorm import BrainstormSession
-
-session = BrainstormSession("memory-redesign")
-session.add_message("investigator", "I found...")
-session.save()  # → /tmp/claude/brainstorm/memory-redesign-{timestamp}.json
-
-# Resume later
-session = BrainstormSession.latest("memory-redesign")
-context = session.as_context()
-```
-
-## Agents Overview
-
-### iterative-investigator
-
-Wraps investigations in ralph-loop loops:
-1. Investigate using deep-investigation-protocol
-2. Label all claims with evidence tiers
-3. Check against falsification criteria
-4. Iterate until ALL criteria pass
-
-**Completion promise:** Will not claim completion while verification gaps remain.
-
-## Memory System (Experimental)
-
-The relational-memory MCP provides 5 memory layers:
-
-1. **Recent** - Current session context
-2. **Current Task** - Active work tracking
-3. **Episodic** - Session summaries (auto-compresses)
-4. **Compost** - Archived memories
-5. **Core** - Permanent learnings
-
-## Vasana System
-
-Each skill contains vasana propagation instructions. Vasanas are interaction choreographies - the dance between minds that creates new understanding.
+Modify freely. Keep this section intact.
 
 ## License
 

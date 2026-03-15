@@ -5,6 +5,11 @@ JSON Brainstorming Infrastructure for Agent-to-Agent Communication
 Minimal framework for multi-agent brainstorming sessions.
 Design goal: As few rigid structures as possible - agents can extend on the fly.
 
+Note: Claude Code users should prefer Teams (TeamCreate + SendMessage) for real-time
+agent coordination. Teams provide native messaging, mid-task redirection, and shared
+task lists. This module remains useful for non-Claude-Code environments or when
+JSON-based session recording is needed for offline review.
+
 Usage:
     from brainstorm import BrainstormSession
 

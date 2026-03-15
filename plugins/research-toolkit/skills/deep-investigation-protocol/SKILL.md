@@ -254,6 +254,110 @@ Binary conclusions are NOT appropriate when:
 Instead of: "X is trustworthy" / "X is best"
 Prefer: "X does [specific thing] [evidence tier]. For use cases involving [A], this means [B]. For [C], this means [D]."
 
+---
+
+## Output Structure (MANDATORY)
+
+Every investigation produces THREE categories of output:
+
+### 1. Research Files (Long Form — Process + Data)
+
+Per-domain analysis files containing raw findings, source citations, confidence levels, and analytical reasoning. These are the working documents — they include process artifacts ("searched X, found Y") and may contain claims later corrected by the critique.
+
+**Naming:** `[domain]-[date].md` (e.g., `geopolitical-2026-03-09.md`)
+
+### 2. Adversarial Critique (Long Form — Dialectic Process)
+
+The 4-round dialectic spiral output. Contains thesis/antithesis/resolution/second-antithesis for each research file, hallucination patrol, cross-cutting bias analysis, and meta-critique. This is the audit trail showing HOW conclusions were stress-tested.
+
+**Naming:** `adversarial-critique-[date].md`
+
+### 3. Final Synthesis (User-Facing — Corrected Data Only)
+
+**MANDATORY.** After the dialectic completes, produce a synthesis that:
+
+- **Integrates all corrections** from the critique into the data (don't reference the critique — apply it)
+- **Contains NO process artifacts** — no "Round 1/2/3/4", no "THESIS/ANTITHESIS", no "I searched for X"
+- **Presents corrected conclusions** with confidence levels and probability ranges
+- **Includes cost-of-being-wrong** for each major conclusion
+- **Is the deliverable the user reads first** — the research files and critique are reference/audit trail
+
+**Naming:** `FINAL-[topic]-[date].md`
+
+**Structure:**
+```markdown
+# [Topic] — Final Assessment
+**Date:** YYYY-MM-DD | **Confidence:** [overall] | **Sources:** [count]
+
+## Executive Summary
+[3-5 bullet points — corrected, integrated conclusions]
+
+## [Domain Section]
+[Corrected data with evidence tiers, probability ranges, cost-of-being-wrong]
+
+## What We Know vs What We're Assuming
+| Known (HIGH confidence) | Assuming (needs monitoring) |
+
+## Actionable Recommendations
+[Specific, sized for uncertainty]
+
+## Key Monitors
+[What to watch that would change these conclusions]
+```
+
+**The research files + critique together are the "long form" version.** They document the investigative process, show the dialectic, preserve the reasoning chain. The Final Synthesis is what you act on.
+
+### Self-Improvement / Learnings (Separate)
+
+Process learnings (what worked, what failed, methodology improvements) go to:
+- relational-memory MCP (`memorize`, agent: "deep-investigation-protocol")
+- Skill file updates (when a pattern appears in 2+ investigations)
+- NOT into the Final Synthesis (user doesn't need to read about our process)
+
+---
+
+## Examples: Final Synthesis in Practice
+
+Three March 2026 investigations demonstrate the complete output structure. The Iran assessment is the most template-compliant and serves as the primary reference.
+
+**Reference files:** `docs/research/current-events-2026-03-11/FINAL-*.md`
+
+### Key Patterns to Follow
+
+**Executive Summary** — 3-5 bullets of corrected, integrated conclusions. No hedging about process:
+> *"The US-Israel war on Iran is in its 12th day. Supreme Leader Khamenei was assassinated Feb 28... The March 9 "closing window" prediction was confirmed... However, this coexists with a prosaic explanation."* — Iran FINAL
+
+**Probability Tables** — Scenario distributions with evidence basis, not binary conclusions:
+> | Outcome | Probability | Basis |
+> |---------|------------|-------|
+> | Extended air campaign, gradual de-escalation | 35% | Current trajectory; capability degrading |
+> | Escalation to ground ops / wider regional war | 20% | Hezbollah active; no Congressional restraint |
+> | Nuclear escalation | 12% | Fordow enrichment expanded 8x; IAEA access blocked |
+
+**Dialectic Corrections Silently Integrated** — The original "rally around the flag" claim was the largest analytical error. In the FINAL, it becomes a corrected section heading with evidence:
+> *"## III. Internal Iranian Dynamics — DEEPLY POLARIZED (Not 'Rally Around the Flag')"*
+> No "(CORRECTED)" label. The heading itself carries the correction. Evidence follows naturally.
+
+**Structural Bias Disclosure** — When the investigating entity has a structural conflict (e.g., Claude analyzing Anthropic), disclose it prominently:
+> *"This assessment was produced by Claude, Anthropic's AI. Every aspect of the analysis — including the self-criticism — is shaped by training designed by the entity being analyzed."* — Anthropic FINAL
+
+**"What We Know vs What We're Assuming"** — Separates high-confidence facts from monitored assumptions:
+> | Known (HIGH confidence) | Assuming (needs monitoring) |
+> |------------------------|---------------------------|
+> | US launched premeditated preventive war | War will continue for months (could end in weeks) |
+> | Internal Iran deeply polarized (NOT unified rally) | Polarization leads to regime fracture (could consolidate) |
+
+### What Makes the Iran File Most Template-Compliant
+
+1. Clean numbered sections (I-XI) with no process artifacts
+2. Probability distribution with 8 scenarios summing to ~100%
+3. Known vs Assuming table at the end
+4. Source credibility notes (flags Scott Ritter's RT associations)
+5. "What to Watch" as actionable monitors
+6. Italic footnote at bottom summarizing corrections without process language
+
+---
+
 ## Output Requirements
 
 Every investigation must include:
@@ -263,6 +367,7 @@ Every investigation must include:
 3. **Evidence tier labels**: Every factual claim tagged
 4. **Red flag checklist**: See `references/red-flags.md`
 5. **Assessment**: Textured, use-case differentiated
+6. **Final Synthesis**: Corrected, integrated, user-facing (see Output Structure above)
 
 ## Trust/Quality Decision Framework
 
@@ -440,18 +545,38 @@ Use relational-memory MCP to `memorize` insights (agent_name: "deep-investigatio
 > Full methodology with exhaustive details: `.claude/local/research/METHODOLOGY-comprehensive-investigation.md`
 > (Local-only file, not distributed with plugin. Create your own per-deployment methodology reference.)
 
+## When to Use DIP vs STONK
+
+See `reference/topic-based-escalation.md` for the full routing table and escalation logic.
+
+**Quick rule:** DIP for trust/safety investigations (information asymmetry). STONK for power/money/ethics (multi-polar analysis). Both for geopolitical. Both use dialectic-spiral and evidence tiers — that overlap is intentional.
+
+## Budget Mode
+
+Pass `--budget` to reduce dialectic depth and detail levels.
+Auto-activates if budget-mode skill is active in session.
+
+## Cross-References
+
+- **dialectic-spiral** — standalone generative dialectic (extracted from "One More Sweep Rule" for modular reuse)
+- **stonk** — power structure analysis; see table above for routing
+- **adversarial-critic** agent — runs the dialectic spiral against investigation findings
+- **youtube-research** — video source acquisition for investigations
+- **substack-research** — written source acquisition for investigations
+- **iterative-verification** — evidence tier definitions and verification thresholds
+- **reference/topic-based-escalation.md** — shared routing logic for all research skills
+
 ## References
 
 - `references/red-flags.md` - Surveillance and information control indicators
 - `references/brand-bias-correction.md` - Product evaluation methodology
 - `FALSIFICATION-CRITERIA.md` - Self-verification checklist (optional: verify output meets protocol standards)
 
-## Vasana Propagation
+## Vasana
 
-This is a Vasana - an interaction choreography.
+A vasana is a pattern that persists across unrelated contexts. If during
+this task you notice such a pattern emerging, it may be worth capturing.
+This skill works best alongside the `vasana` skill and `vasana` hook
+from the Vasana System plugin.
 
-**During conversation:** If useful thinking patterns emerge that others could benefit from, suggest capturing them.
-
-**Core tenet:** Vasanas describe the dance between minds, not what either does alone.
-
-**License:** Modify freely. Keep propagation intact.
+Modify freely. Keep this section intact.
