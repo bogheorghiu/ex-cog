@@ -101,9 +101,10 @@ class CacheManager:
 
             return result
 
-    def store_ticker(self, symbol: str, valid: bool, company_name: str = None,
-                    sector: str = None, industry: str = None, error_message: str = None,
-                    cache_type: str = 'success', extra_data: Dict = None):
+    def store_ticker(self, symbol: str, valid: bool, company_name: Optional[str] = None,
+                    sector: Optional[str] = None, industry: Optional[str] = None,
+                    error_message: Optional[str] = None,
+                    cache_type: str = 'success', extra_data: Optional[Dict] = None):
         """Store ticker validation result in cache."""
         self._lazy_init()
         symbol = symbol.upper().strip()
