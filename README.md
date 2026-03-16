@@ -1,4 +1,4 @@
-# ex-cog — The Means of Cognition
+# ex-cog — means of cognition
 
 > Externalize cognition before it's enclosed.
 
@@ -30,7 +30,7 @@ These plugins are the proof. Claude Code plugin marketplace — investigation, v
 
 **research-toolkit** externalizes investigation methodology — how to verify claims, stress-test conclusions, detect manufactured consensus, and analyze power structures.
 
-**budget-mastery** externalizes resource awareness — efficiency internalized as identity, not imposed as constraint. Based on BATS framework research (arXiv 2511.17006).
+**budget-mastery** externalizes resource awareness — efficiency internalized as identity, not imposed as constraint. Loosely based on BATS framework research (arXiv 2511.17006).
 
 **vasana-system** externalizes pattern recognition itself — noticing when behavioral patterns persist across unrelated domains, recording them, testing whether they work. Includes relational-memory and edge-graph MCPs for pattern persistence.
 
