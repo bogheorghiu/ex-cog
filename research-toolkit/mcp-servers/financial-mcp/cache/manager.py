@@ -55,7 +55,7 @@ class CacheManager:
                 CREATE INDEX IF NOT EXISTS idx_expires_at ON ticker_cache(expires_at)
             """)
             conn.commit()
-        self._initialized = True
+            self._initialized = True
 
     def _calculate_expiry(self, cache_type: str) -> datetime:
         if cache_type == 'success':
