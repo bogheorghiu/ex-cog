@@ -80,6 +80,9 @@ async def main():
             server.create_initialization_options(),
         )
 
+def main_sync():
+    """Sync entry point for pyproject.toml console_scripts."""
+    asyncio.run(main())
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "financial-mcp"
+version = "0.1.0"
+description = "Financial data MCP server powered by yfinance"
+requires-python = ">=3.10"
+dependencies = [
+    "yfinance>=0.2.18",
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+financial-mcp = "server:main_sync"
+
+[tool.hatch.build.targets.wheel]
+# Explicit inclusion — uvx installs from git subdirectory, needs all modules
+packages = ["implementations"]
+include = ["server.py", "tool_definitions.py"]
