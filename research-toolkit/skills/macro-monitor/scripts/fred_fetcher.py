@@ -7,8 +7,11 @@ No API key required for basic CSV downloads.
 Commonly used series:
 - DGS10: 10-Year Treasury Constant Maturity Rate
 - DTWEXBGS: Nominal Broad U.S. Dollar Index
-- GOLDAMGBD228NLBM: Gold Fixing Price (London PM)
+- DCOILBRENTEU: Brent Crude Oil Price
+- DEXUSEU: USD per EUR Exchange Rate
 - T10Y2Y: 10-Year Treasury Minus 2-Year Treasury (yield curve)
+- VIXCLS: CBOE Volatility Index
+- FEDFUNDS: Federal Funds Effective Rate
 """
 
 from __future__ import annotations
@@ -23,11 +26,13 @@ from typing import Optional
 MACRO_SERIES = {
     "DGS10": "10-Year Treasury Yield",
     "DTWEXBGS": "Broad Dollar Index",
-    "GOLDAMGBD228NLBM": "Gold Price (London PM)",
     "T10Y2Y": "10Y-2Y Yield Spread",
     "VIXCLS": "VIX Volatility Index",
     "FEDFUNDS": "Federal Funds Rate",
+    "DCOILBRENTEU": "Brent Crude Oil ($/barrel)",
+    "DEXUSEU": "USD/EUR Exchange Rate",
 }
+
 
 
 def fetch_fred_series(
@@ -103,15 +108,17 @@ def check_divergence(yields_series: str = "DGS10", dollar_series: str = "DTWEXBG
 
     Returns dict with analysis.
     """
-    yields_data = fetch_fred_series(yields_series, last_n_days=days + 5)
-    dollar_data = fetch_fred_series(dollar_series, last_n_days=days + 5)
+    yields_data = fetch_fred_series(yields_series, last_n_days=days + 14)
+    dollar_data = fetch_fred_series(dollar_series, last_n_days=days + 14)
 
     if len(yields_data) < 2 or len(dollar_data) < 2:
         return {"error": "Insufficient data"}
 
-    # Calculate changes
-    yield_change = yields_data[-1]['value'] - yields_data[-days]['value'] if len(yields_data) > days else 0
-    dollar_change = dollar_data[-1]['value'] - dollar_data[-days]['value'] if len(dollar_data) > days else 0
+    # Use first and last available points. Window is approximate since
+    # trading days != calendar days (fetches days+14 calendar days of data,
+    # actual comparison span depends on market holidays).
+    yield_change = yields_data[-1]['value'] - yields_data[0]['value']
+    dollar_change = dollar_data[-1]['value'] - dollar_data[0]['value']
 
     # Determine pattern
     yield_direction = "up" if yield_change > 0.05 else ("down" if yield_change < -0.05 else "flat")
@@ -165,6 +172,48 @@ def macro_snapshot() -> dict:
     return snapshot
 
 
+RED_FLAGS = {
+    "DCOILBRENTEU": {"name": "Brent Crude", "high": 120, "low": 70},
+    "VIXCLS": {"name": "VIX", "high": 35, "critical": 45},
+    "T10Y2Y": {"name": "Yield Curve", "inversion": 0},
+    "DGS10": {"name": "10Y Yield", "high": 5.0},
+    "DEXUSEU": {"name": "USD/EUR (dollar weakening)", "high": 1.20},
+}
+
+
+def crisis_check() -> dict:
+    """Run all checks and return only alerts."""
+    alerts = []
+    snapshot = macro_snapshot()
+
+    for series_id, thresholds in RED_FLAGS.items():
+        data = snapshot.get(series_id, {})
+        value = data.get("value")
+        if value is None:
+            continue
+
+        name = thresholds["name"]
+        if "critical" in thresholds and value > thresholds["critical"]:
+            alerts.append(f"🚨 {name}: {value} CRITICAL (above {thresholds['critical']})")
+        elif "high" in thresholds and value > thresholds["high"]:
+            alerts.append(f"🔴 {name}: {value} (above {thresholds['high']})")
+        if "low" in thresholds and value < thresholds["low"]:
+            alerts.append(f"🔴 {name}: {value} (below {thresholds['low']})")
+        if "inversion" in thresholds and value < thresholds["inversion"]:
+            alerts.append(f"🔴 {name}: {value} INVERTED (recession signal)")
+
+    div = snapshot.get("divergence_analysis", {})
+    if div.get("divergence_detected"):
+        alerts.append(f"🔴 DIVERGENCE: {div['interpretation']}")
+
+    return {
+        "alerts": alerts,
+        "alert_count": len(alerts),
+        "snapshot": {k: v for k, v in snapshot.items() if k != "divergence_analysis"},
+        "divergence": div,
+    }
+
+
 def main():
     """CLI interface for quick checks."""
     import sys
@@ -176,6 +225,7 @@ def main():
         print("  python fred_fetcher.py <series_id>     # Get latest value")
         print("  python fred_fetcher.py snapshot        # Quick macro snapshot")
         print("  python fred_fetcher.py divergence      # Check yield-dollar divergence")
+        print("  python fred_fetcher.py crisis          # Red flag alert check")
         print("\nCommon series:")
         for sid, name in MACRO_SERIES.items():
             print(f"  {sid}: {name}")
@@ -189,6 +239,19 @@ def main():
     elif cmd == "DIVERGENCE":
         result = check_divergence()
         print(json.dumps(result, indent=2))
+    elif cmd == "CRISIS":
+        result = crisis_check()
+        if result["alert_count"] == 0:
+            print("✅ No red flags. All indicators within normal range.")
+        else:
+            print(f"⚠️  {result['alert_count']} ALERT(S):")
+            for alert in result["alerts"]:
+                print(f"  {alert}")
+        print()
+        for series_id, thresholds in RED_FLAGS.items():
+            data = result['snapshot'].get(series_id, {})
+            val = data.get('value', '?')
+            print(f"  {thresholds['name']}: {val}")
     else:
         # Treat as series ID
         latest = get_latest(cmd)
