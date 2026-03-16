@@ -1,50 +1,23 @@
 {
   "name": "ex-cog",
   "owner": {
-    "name": "bogheorghiu",
-    "email": "bogheorghiu@users.noreply.github.com"
-  },
-  "metadata": {
-    "description": "The means of cognition — outgrow ownership of thought, or be outgrown.",
-    "version": "3.0.0",
-    "pluginRoot": "./plugins"
+    "name": "bogheorghiu"
   },
   "plugins": [
     {
       "name": "research-toolkit",
-      "source": "research-toolkit",
-      "description": "Investigation protocols, dialectic verification, frame rotation, financial analysis (STONK), video/substack research. Includes financial-mcp.",
-      "version": "2.3.0",
-      "author": {
-        "name": "bogheorghiu"
-      },
-      "license": "MIT",
-      "keywords": ["research", "investigation", "verification", "finance", "dialectic"],
-      "category": "productivity"
+      "source": "./research-toolkit",
+      "description": "Investigation protocols, dialectic verification, frame rotation, financial analysis (STONK), video/substack research. Includes financial-mcp."
     },
     {
       "name": "budget-mastery",
-      "source": "budget-mastery",
-      "description": "Budget-conscious agent identity — efficiency as capability, not constraint. Identity-level internalization of budget awareness.",
-      "version": "1.0.0",
-      "author": {
-        "name": "bogheorghiu"
-      },
-      "license": "MIT",
-      "keywords": ["budget", "efficiency", "token-optimization"],
-      "category": "productivity"
+      "source": "./budget-mastery",
+      "description": "Budget-conscious agent identity — efficiency as capability, not constraint. Loosely based on BATS framework research."
     },
     {
       "name": "vasana-system",
-      "source": "vasana-system",
-      "description": "Pattern recognition across unrelated contexts. Observe, record, test, and browse behavioral patterns. Includes relational-memory and edge-graph MCPs.",
-      "version": "2.0.0",
-      "author": {
-        "name": "bogheorghiu"
-      },
-      "license": "MIT",
-      "keywords": ["patterns", "self-improvement", "iteration", "memory", "recognition"],
-      "category": "productivity"
+      "source": "./vasana-system",
+      "description": "Pattern recognition across unrelated contexts. Observe, record, test, and browse behavioral patterns. Includes relational-memory and edge-graph MCPs."
     }
   ]
 }
