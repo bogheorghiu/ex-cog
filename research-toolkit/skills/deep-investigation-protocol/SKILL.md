@@ -10,6 +10,7 @@ description: >
   instructions, when/where/who founded, or explicit "just tell me quick."
 changelog:
   - "2026-03-11: Added self-reflexivity clause, pre-investigation setup, multi-perspective source sweep (Stage 1.5), source omission analysis, analytical patterns (closing window, manufactured consensus, threshold vs binary, externality framing, cui bono, Postol pattern), social media integration, confirmation bias countermeasures (steel-man, probability distribution, convergence warning, one-more sweep, generative dialectic), self-improvement integration. All additions validated in March 2026 current-events investigation."
+  - "2026-03-16: Added mandatory non-English language pass to Stage 1.5, language identification to Pre-Investigation Setup step 6, language omission analysis to Stage 3, non-English criteria check. Validated in Romania geopolitical risk investigation where Farsi + Romanian sources changed probability distribution by ~5pp and revealed entirely new risk category."
 ---
 
 <EXTREMELY_IMPORTANT>
@@ -97,14 +98,15 @@ Before searching anything:
 ```markdown
 # Criteria: [investigation name]
 - [ ] Multi-bubble sweep completed (all relevant categories)
-- [ ] Source omission analysis completed
+- [ ] Non-English language pass completed (all relevant languages identified and searched)
+- [ ] Source omission analysis completed (including language omission)
 - [ ] Confirmation bias check passed (steel-man, probability distribution)
 - [ ] Technical experts identified and claims tested (if applicable)
 Done when: Synthesis is stable across 2+ additional source sweeps.
 ```
 
 5. **Identify your blind spots** — what is your default assumption? Which ideological bubble are you closest to? What emotional reaction does this topic trigger?
-6. **Identify relevant non-English languages** — Which state actors are involved? What languages do they publish in domestically? Plan search queries in those languages. If you can't construct queries in a language, flag this as a known gap rather than pretending English sources are sufficient.
+6. **Identify relevant non-English languages** — Which state actors, populations, or expert communities are involved? What languages do they publish in domestically? Plan native-script search queries for those languages. English-language coverage of non-Western perspectives is a filtered proxy — states say different things in different languages. English-facing state media is crafted for external consumption; domestic-language media reveals actual priorities and framing. If you cannot construct queries in a relevant language, flag this as a known gap rather than pretending English sources are sufficient.
 
 ## Investigation Stages
 
@@ -140,22 +142,33 @@ Establish baseline claims.
 
 **Sweep protocol:** Search each relevant position. Record what each says AND what each is silent about. Then ask: **what position haven't I checked that doesn't fit any of these categories?**
 
-### Mandatory Non-English Language Pass
+### Stage 1.6: Mandatory Non-English Language Pass
 
-For any investigation involving state actors:
+**This is not optional.** For any investigation involving state actors or geographically-specific risk:
 
-1. **Which languages are operationally relevant?** (e.g., Iran investigation → Farsi + Arabic; Romania investigation → Romanian + Farsi)
-2. **What is the domestic-facing discourse?** States say different things in different languages. English-language state media is PR; domestic-language media reveals actual priorities and framing.
-3. **Search in those languages.** Use native-script search queries. Examples:
+1. **Which languages are operationally relevant?** Map actors to their domestic publication languages:
+   - Iran → Farsi (+ Arabic for regional messaging)
+   - China → Mandarin
+   - Russia → Russian
+   - Turkey → Turkish
+   - Local affected population → their language (Romanian, Ukrainian, Hindi, etc.)
+
+2. **Construct native-script search queries.** Not transliterated — actual script:
    - Farsi: سپر موشکی رومانی (Romania missile shield)
-   - Romanian: risc militar România Iran (Romania Iran military risk)
    - Chinese: 罗马尼亚导弹防御伊朗 (Romania missile defense Iran)
    - Russian: Девеселу Румыния Иран угроза (Deveselu Romania Iran threat)
-4. **What is ABSENT from non-English discourse?** Absence is signal. If IRGC names targets in Farsi but Romania isn't among them, that's more informative than any English-language speculation about whether Romania might be targeted.
+   - Romanian: risc militar România Iran (Romania Iran military risk)
 
-**Why this matters:** English-language coverage of non-Western perspectives is filtered through translation choices, editorial selection, and PR framing. The unfiltered domestic discourse often contains expert analysis unavailable in English, framing that reveals actual priorities, and meaningful absences.
+3. **Search and record what's different from English sources.** Specifically:
+   - **What targets does state media name in its own language vs. in English?** Meaningful absence from domestic targeting discourse is MORE informative than presence in English PR.
+   - **What do domestic military experts say that doesn't make English-language coverage?** (Gen. Grumaz's "unintentional incident" category existed only in Romanian-language interviews.)
+   - **How does the actor frame the issue domestically vs. externally?** (Iran's Mehr News covered Deveselu as Russia's concern, not Iran's — this framing was invisible in English sources.)
 
-> *Validated March 2026:* Romania geopolitical assessment required 3 passes. Pass 1 (English-only) missed: Gen. Grumaz's "unintentional incident" risk category (Romanian only), Iran viewing Deveselu through Russia's lens (Mehr News Farsi), IRGC absence of Romania from Farsi targeting discourse. Pass 3 findings changed probability distribution by ~5pp and introduced an entirely new risk category. This should have been Pass 1.
+4. **Record what is ABSENT from non-English discourse.** If a state actor names targets in its own language but doesn't name the entity you're investigating, that absence is a finding: it means the entity is low-priority for that actor regardless of what English-language speculation says.
+
+**Why this matters:** The Romania investigation found that BOTH Western media AND Russian propaganda overstated Romania's target value — for opposite strategic reasons. Only Farsi sources revealed that Iran doesn't consider Deveselu its problem. Only Romanian sources revealed the unintentional-incident risk category. English-language analysis, no matter how many "perspectives" it includes, cannot substitute for this.
+
+**Cross-reference:** `frame-rotation` skill addresses this at the conceptual level ("What structure hides in my native grammar?"). This section operationalizes it into concrete search behavior.
 
 > For detailed source lists, see `.claude/local/research/METHODOLOGY-comprehensive-investigation.md` Section 3.
 > (Local-only file, not distributed with plugin. Create your own per-deployment methodology reference.)
@@ -246,7 +259,7 @@ After the multi-bubble sweep, map what each source type is SILENT about:
 When Source A reports X but Source B is silent: this is not evidence X is false — it is evidence X is inconvenient for B's position. The most important findings often emerge from the intersection of what different sources omit.
 
 **Language Omission Analysis:**
-After the multi-bubble sweep, also check: what perspectives are ONLY available in non-English sources? If your entire evidence base is English-language, you are seeing reality through a single linguistic lens regardless of how many "perspectives" you've consulted.
+After the multi-bubble sweep, also check: what perspectives are ONLY available in non-English sources? If your entire evidence base is English-language, you are seeing reality through a single linguistic lens regardless of how many "perspectives" you've consulted. The most critical findings in the Romania investigation (unintentional incident risk, Iran's indifference to Deveselu, defense architecture gaps) were invisible in English.
 
 ### Stage 4: Risk/Quality Assessment
 Project trajectories.
