@@ -14,7 +14,3 @@ FAILED_TICKER_TTL_DAYS = int(os.environ.get('CACHE_FAILED_TTL_DAYS', 30))   # Fa
 # whether running from source (PYTHONPATH), pip install, or uvx.
 CACHE_DIR = os.environ.get('CACHE_DIR', str(Path.home() / ".cache" / "financial-mcp"))
 CACHE_DB_PATH = os.path.join(CACHE_DIR, 'ticker_cache.db')
-
-# Cache behavior settings
-MAX_CACHE_SIZE = int(os.environ.get('MAX_CACHE_SIZE', 10000))  # Maximum cached entries before cleanup
-CLEANUP_BATCH_SIZE = int(os.environ.get('CLEANUP_BATCH_SIZE', 1000))  # How many expired entries to clean at once
