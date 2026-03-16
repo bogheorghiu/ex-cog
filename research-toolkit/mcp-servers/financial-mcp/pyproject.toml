@@ -12,10 +12,12 @@ dependencies = [
     "mcp>=1.0.0",
 ]
 
+[tool.hatch.build]
+include = [
+    "server.py",
+    "tool_definitions.py",
+    "implementations/",
+]
+
 [project.scripts]
 financial-mcp = "server:main_sync"
-
-[tool.hatch.build.targets.wheel]
-# Explicit inclusion — uvx installs from git subdirectory, needs all modules
-packages = ["implementations"]
-include = ["server.py", "tool_definitions.py"]
