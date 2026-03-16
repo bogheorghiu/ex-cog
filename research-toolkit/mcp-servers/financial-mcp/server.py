@@ -16,6 +16,9 @@ import mcp.types as types
 
 from tool_definitions import get_tool_definitions
 
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 
 server = Server("financial-data-server")
 
