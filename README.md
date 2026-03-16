@@ -4,7 +4,7 @@
 
 A.I. doesn't make humanity obsolete. It makes the myth of individual cognition obsolete — the Cartesian fiction that thinking happens inside one skull. Cognition was always relational. A.I. just makes it visible — and makes cognitive commons possible.
 
-These plugins are the proof. Plugin marketplace for Claude Code and Claude Cowork — investigation, verification, pattern recognition, budget-conscious synthesis.
+Plugin marketplace for Claude Code and Claude Cowork — investigation, verification, pattern recognition, budget-conscious synthesis.
 
 ## Installation
 
