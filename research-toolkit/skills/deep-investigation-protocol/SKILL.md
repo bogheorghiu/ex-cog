@@ -104,6 +104,7 @@ Done when: Synthesis is stable across 2+ additional source sweeps.
 ```
 
 5. **Identify your blind spots** — what is your default assumption? Which ideological bubble are you closest to? What emotional reaction does this topic trigger?
+6. **Identify relevant non-English languages** — Which state actors are involved? What languages do they publish in domestically? Plan search queries in those languages. If you can't construct queries in a language, flag this as a known gap rather than pretending English sources are sufficient.
 
 ## Investigation Stages
 
@@ -138,6 +139,23 @@ Establish baseline claims.
 | Primary documents | Government statements, court docs, FOIA, OSINT | Raw data, unfiltered | Needs interpretation |
 
 **Sweep protocol:** Search each relevant position. Record what each says AND what each is silent about. Then ask: **what position haven't I checked that doesn't fit any of these categories?**
+
+### Mandatory Non-English Language Pass
+
+For any investigation involving state actors:
+
+1. **Which languages are operationally relevant?** (e.g., Iran investigation → Farsi + Arabic; Romania investigation → Romanian + Farsi)
+2. **What is the domestic-facing discourse?** States say different things in different languages. English-language state media is PR; domestic-language media reveals actual priorities and framing.
+3. **Search in those languages.** Use native-script search queries. Examples:
+   - Farsi: سپر موشکی رومانی (Romania missile shield)
+   - Romanian: risc militar România Iran (Romania Iran military risk)
+   - Chinese: 罗马尼亚导弹防御伊朗 (Romania missile defense Iran)
+   - Russian: Девеселу Румыния Иран угроза (Deveselu Romania Iran threat)
+4. **What is ABSENT from non-English discourse?** Absence is signal. If IRGC names targets in Farsi but Romania isn't among them, that's more informative than any English-language speculation about whether Romania might be targeted.
+
+**Why this matters:** English-language coverage of non-Western perspectives is filtered through translation choices, editorial selection, and PR framing. The unfiltered domestic discourse often contains expert analysis unavailable in English, framing that reveals actual priorities, and meaningful absences.
+
+> *Validated March 2026:* Romania geopolitical assessment required 3 passes. Pass 1 (English-only) missed: Gen. Grumaz's "unintentional incident" risk category (Romanian only), Iran viewing Deveselu through Russia's lens (Mehr News Farsi), IRGC absence of Romania from Farsi targeting discourse. Pass 3 findings changed probability distribution by ~5pp and introduced an entirely new risk category. This should have been Pass 1.
 
 > For detailed source lists, see `.claude/local/research/METHODOLOGY-comprehensive-investigation.md` Section 3.
 > (Local-only file, not distributed with plugin. Create your own per-deployment methodology reference.)
@@ -226,6 +244,9 @@ After the multi-bubble sweep, map what each source type is SILENT about:
 | Think tanks | Conclusions that displease funders |
 
 When Source A reports X but Source B is silent: this is not evidence X is false — it is evidence X is inconvenient for B's position. The most important findings often emerge from the intersection of what different sources omit.
+
+**Language Omission Analysis:**
+After the multi-bubble sweep, also check: what perspectives are ONLY available in non-English sources? If your entire evidence base is English-language, you are seeing reality through a single linguistic lens regardless of how many "perspectives" you've consulted.
 
 ### Stage 4: Risk/Quality Assessment
 Project trajectories.

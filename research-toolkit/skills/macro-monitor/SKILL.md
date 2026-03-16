@@ -1,6 +1,6 @@
 ---
 name: macro-monitor
-description: What is moving in the macro picture? Geopolitical/macro market indicators. Use when (1) China/US Treasury dynamics, (2) dollar-yield divergence, (3) central bank gold behavior, (4) geopolitical market risk. NOT for stock analysis or fundamentals.
+description: What is moving in the macro picture? Geopolitical/macro market indicators. Use when (1) China/US Treasury dynamics, (2) dollar-yield divergence, (3) Brent crude oil / energy price spikes, (4) geopolitical market risk, (5) one-command crisis check. NOT for stock analysis or fundamentals.
 ---
 
 ## Vasana
@@ -86,7 +86,12 @@ Structured monitoring of macro/geopolitical financial indicators using **free pu
 
 ### Automated Scripts
 
-**FRED data:** `python3 scripts/fred_fetcher.py [series_id]`
+**FRED data:** `python3 scripts/fred_fetcher.py [series_id|snapshot|divergence|crisis]`
+- `snapshot` — all 7 macro series (Treasury, dollar, VIX, Fed funds, Brent, EUR, yield curve)
+- `divergence` — yield-dollar divergence check with interpretation
+- `crisis` — red flag alert check (Brent >$120, VIX >35, 10Y >5%, yield curve inverted, USD/EUR >1.20)
+- `[SERIES_ID]` — latest value for any FRED series
+
 **TIC data:** `python3 scripts/tic_parser.py`
 
 ### Manual Quick Check
