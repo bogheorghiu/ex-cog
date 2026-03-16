@@ -1,8 +1,6 @@
 """
 Ticker caching logic separated from validation concerns.
 Single responsibility: manage cached ticker validation results.
-
-Note: Requires PYTHONPATH to include project root for cache.manager import.
 """
 
 from datetime import datetime

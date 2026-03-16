@@ -16,9 +16,6 @@ import mcp.types as types
 
 from tool_definitions import get_tool_definitions
 
-import sys, os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
 
 server = Server("financial-data-server")
 
@@ -83,9 +80,16 @@ async def main():
             server.create_initialization_options(),
         )
 
+
 def main_sync():
-    """Sync entry point for pyproject.toml console_scripts."""
+    """Sync entry point for pyproject.toml console_scripts.
+
+    Enables installation via:
+      pip install ./financial-mcp && financial-mcp
+      uvx --from git+https://...#subdirectory=.../financial-mcp financial-mcp
+    """
     asyncio.run(main())
+
 
 if __name__ == "__main__":
     asyncio.run(main())
