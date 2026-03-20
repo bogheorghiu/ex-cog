@@ -6,7 +6,7 @@ Clean modular architecture with dynamic tool loading.
 Structure:
 - tool_definitions.py: Function schemas (like C++ headers)
 - implementations/: One file per function (like C++ source files)
-- server.py: MCP protocol handler (main entry point)
+- financial_server.py: MCP protocol handler (main entry point)
 """
 
 import asyncio

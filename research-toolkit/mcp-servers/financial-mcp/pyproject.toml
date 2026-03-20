@@ -16,15 +16,15 @@ dependencies = [
 #   pip install . && financial-mcp
 #   uvx --from git+https://github.com/bogheorghiu/ex-cog#subdirectory=research-toolkit/mcp-servers/financial-mcp financial-mcp
 [project.scripts]
-financial-mcp = "server:main_sync"
+financial-mcp = "financial_server:main_sync"
 
 # Explicit build inclusion — hatchling needs to know about all modules.
-# server.py and tool_definitions.py are top-level modules (not packages).
+# financial_server.py and tool_definitions.py are top-level modules (not packages).
 # cache/ and implementations/ are packages (have __init__.py).
 # Without this, uvx install from git subdirectory may miss files.
 [tool.hatch.build]
 include = [
-    "server.py",
+    "financial_server.py",
     "tool_definitions.py",
     "cache/",
     "implementations/",
