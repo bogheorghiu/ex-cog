@@ -19,7 +19,7 @@ Extract and analyze long-form content from Substack publications. Substacks capt
 ```
 IF auth/browser_state.json does NOT exist:
 
-  1. Run: python -m scripts.auth_capture --url https://yoursubstack.substack.com
+  1. Run: python -m scripts.auth_capture https://yoursubstack.substack.com
   2. Browser opens — log in manually (handles 2FA, CAPTCHA)
   3. IMPORTANT: After login, navigate to ANY OTHER PAGE in the Substack
      (click an article, the homepage, anything)
@@ -31,20 +31,28 @@ IF auth/browser_state.json does NOT exist:
   a navigation event to know login is complete.
 ```
 
-**Tooling location:** `projects/substack-scraper/`
+**Tooling location:** `tools/substack-scraper/` (relative to plugin root)
+
+## Quick Start
+
+Use the `/substack-extract` command for the full pipeline:
+```bash
+/substack-extract --url https://example.substack.com --detail 5
+```
 
 ## Phases
 
 ### Phase 1: Setup and Configuration
 
-1. Verify `projects/substack-scraper/` exists and has dependencies
-2. Check `auth/browser_state.json` — if missing, guide first-time setup
-3. Configure target Substack URL (copy `config.example.json` to `config.json` and edit, or use `--url` flag)
+1. Locate scraper: the plugin includes it at `${CLAUDE_PLUGIN_ROOT}/tools/substack-scraper/`
+2. Install dependencies: `pip install -r ${CLAUDE_PLUGIN_ROOT}/tools/substack-scraper/requirements.txt && playwright install chromium`
+3. Check `auth/browser_state.json` — if missing, guide first-time setup
+4. Configure target Substack URL (copy `config.example.json` to `config.json` and edit, or use `--url` flag)
 
 ### Phase 2: Discovery and Extraction
 
 ```bash
-cd projects/substack-scraper
+cd ${CLAUDE_PLUGIN_ROOT}/tools/substack-scraper
 python main.py
 ```
 
@@ -117,7 +125,7 @@ mcp__relational-memory__memorize(
 Same saturation detection as youtube-research (see youtube-research SKILL.md "Decision Algorithm" section for full implementation):
 
 - Track new patterns vs reinforced patterns per pass
-- Stop after 2+ consecutive LOW passes (< 2 novel patterns)
+- Stop after 2+ consecutive LOW passes (< 2 total: new + reinforced patterns)
 - Adjust detail level dynamically: up if finding gold, down if diminishing returns
 
 ## Topic-Based Escalation

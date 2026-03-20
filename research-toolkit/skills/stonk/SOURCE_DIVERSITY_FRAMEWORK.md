@@ -31,7 +31,7 @@ These outlets exist to challenge official narratives. Their bias is toward findi
 | **ProPublica** | Data-driven investigations, government accountability | Nonprofit model, Sandler Foundation funded — transparent but examine |
 | **Democracy Now!** | Daily coverage centering affected populations, anti-war | Consistently anti-intervention — strength on military issues, less useful for nuanced geopolitics |
 | **Declassified UK** | UK military/intelligence investigations, FOIA-based | UK-focused, limited non-UK coverage |
-| **Bellingcat** | OSINT, geolocation, chemical weapons verification | Receives some Western government grants — apply scrutiny on Russia/Syria coverage |
+| **Bellingcat** | OSINT, geolocation, chemical weapons verification | Funded in part by NED (€112K in 2020 per Dutch accounts; NED is Congress-funded but structured as private nonprofit), Dutch Postcode Lottery, and UK FCO-linked Integrity Initiative. Bellingcat acknowledges NED funding but defines it as non-governmental — this definitional reframing (accepting government-origin money while claiming no government funding) is itself analytically significant. Apply scrutiny on Russia/Syria coverage |
 | **OCCRP** | Organized crime, corruption, financial networks | Government-funded consortium — transparency is good but note funding |
 
 ### 2. Anti-Interventionist / Structural Critique
@@ -79,7 +79,7 @@ These outlets challenge Western narratives but may serve other power structures.
 | **Carnegie** | Liberal internationalist | Foundation endowment |
 | **CSIS** | Centrist establishment | Defense contractors, foreign governments |
 | **Atlantic Council** | Pro-NATO, pro-transatlantic | Gulf states, weapons industry, NATO governments |
-| **Brookings** | Center-left establishment | Qatar (funded entire center) |
+| **Brookings** | Center-left establishment | Qatar funded Brookings Doha Center (~$14.8M reported); overall funding is mixed corporate/government/foundation. Note: Qatar is a Western ally (hosts US CENTCOM) but has independent interests — Qatar as specific sponsor matters in Gulf/Middle East analysis |
 | **RAND** | Defense-adjacent research | US military contracts |
 | **Quincy Institute** | Anti-interventionist realist | Koch + Soros |
 | **Stimson Center** | Arms control, international security | Mixed government/foundation |
