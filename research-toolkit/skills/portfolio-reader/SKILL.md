@@ -2,7 +2,7 @@
 name: portfolio-reader
 description: >-
   What does my portfolio actually look like right now? Reads local portfolio
-  snapshots (Tradeville + IBKR) and provides unified analysis. Use when
+  snapshots and provides unified analysis across multiple brokers. Use when
   (1) user asks about portfolio, (2) before making investment decisions,
   (3) when macro indicators change significantly, (4) cross-referencing
   positions with STONK or macro-monitor analysis.
@@ -12,8 +12,8 @@ description: >-
 
 ## Purpose
 
-Read and analyze local portfolio snapshots from Tradeville (Romanian broker)
-and IBKR (Interactive Brokers). Provides a unified view across both accounts.
+Read and analyze local portfolio snapshots from configured brokers.
+Provides a unified view across all accounts.
 
 ## Where Data Lives
 
@@ -21,11 +21,10 @@ All portfolio data is local-only (gitignored):
 
 ```
 .claude/local/portfolio/snapshots/
-├── tradeville-YYYY-MM-DD-HHMM.json     # Tradeville positions
-├── tradeville-YYYY-MM-DD-HHMM.png      # Tradeville screenshot
-├── ibkr-positions-YYYY-MM-DD-HHMM.json # IBKR positions (from API)
-├── ibkr-summary-YYYY-MM-DD-HHMM.json   # IBKR account summary (NAV, cash)
-├── ibkr-web-YYYY-MM-DD-HHMM.png        # IBKR screenshot (visual verification)
+├── <broker>-YYYY-MM-DD-HHMM.json       # Broker positions
+├── <broker>-YYYY-MM-DD-HHMM.png        # Broker screenshot
+├── <broker>-positions-YYYY-MM-DD-HHMM.json  # Positions (from API)
+├── <broker>-summary-YYYY-MM-DD-HHMM.json    # Account summary (NAV, cash)
 ```
 
 ## How to Read Snapshots
@@ -36,25 +35,18 @@ All portfolio data is local-only (gitignored):
 ls -t .claude/local/portfolio/snapshots/*.json 2>/dev/null | head -5
 ```
 
-Or use glob to find the most recent by timestamp pattern:
-- Tradeville: `tradeville-*.json` (positions array)
-- IBKR positions: `ibkr-positions-*.json` (positions with market values)
-- IBKR summary: `ibkr-summary-*.json` (NAV, cash, margin, buying power)
+Or use glob to find the most recent by timestamp pattern.
+JSON files contain positions arrays with symbols, quantities, prices, P&L, and market values.
+Summary files contain NAV, cash balances, buying power, and margin info.
 
 ### Step 2: Read JSON Data
 
-**Tradeville JSON** contains a positions array with:
+**Position JSON** typically contains:
 - Symbol, quantity, average price, current price
 - P&L (realized and unrealized), market value
-- Currency (RON-denominated)
+- Currency denomination
 
-**IBKR positions JSON** contains:
-- Contract details (symbol, exchange, currency, asset class)
-- Position size, market price, market value
-- Average cost, unrealized P&L
-- Multi-currency (USD, EUR, etc.)
-
-**IBKR summary JSON** contains:
+**Summary JSON** typically contains:
 - Net asset value (NAV)
 - Cash balances by currency
 - Buying power, margin requirements
@@ -69,16 +61,16 @@ may have missed data or when the user wants visual confirmation.
 
 ### Unified Portfolio View
 
-Combine Tradeville + IBKR data into one view:
-1. Read latest JSON from both brokers
-2. Normalize currencies (RON positions from Tradeville, multi-currency from IBKR)
+Combine data from all brokers into one view:
+1. Read latest JSON from each broker
+2. Normalize currencies across accounts
 3. Present total portfolio value, position-level detail, allocation breakdown
 
 ### Sector Allocation
 
 Group positions by sector/geography:
-- Romanian equities (Tradeville)
-- International equities (IBKR)
+- Domestic equities
+- International equities
 - Energy sector exposure (cross-reference with oil prices from macro-monitor)
 - Geographic concentration risk
 
@@ -93,8 +85,7 @@ Group positions by sector/geography:
 
 Compare snapshots across dates:
 ```bash
-# Find snapshots from different dates
-ls .claude/local/portfolio/snapshots/tradeville-*.json
+ls .claude/local/portfolio/snapshots/*.json
 ```
 - Diff positions between dates (new/closed positions, quantity changes)
 - Track portfolio value over time
@@ -104,14 +95,14 @@ ls .claude/local/portfolio/snapshots/tradeville-*.json
 
 ### With macro-monitor
 
-- **Oil prices (Brent):** Affect energy sector positions (Romgaz, OMV Petrom)
-- **EUR/RON rate:** Affects Romanian stock values when comparing to EUR/USD portfolio
+- **Oil prices (Brent):** Affect energy sector positions
+- **FX rates:** Affect domestic stock values when comparing to international portfolio
 - **Interest rates:** Impact bank stocks and bond positions
 - **VIX:** High VIX may warrant defensive rebalancing
 
 Run macro-monitor's crisis check for context:
 ```bash
-python3 projects/ex-cog-dev/research-toolkit/skills/macro-monitor/scripts/fred_fetcher.py crisis
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/macro-monitor/scripts/fred_fetcher.py crisis
 ```
 
 ### With STONK
@@ -129,26 +120,12 @@ For in-depth analysis of specific holdings or sectors:
 
 ## How to Update Data
 
-Portfolio data is now collected via the `portfolio-mcp` MCP server
-(`projects/ex-cog-dev/research-toolkit/mcp-servers/portfolio-mcp/`).
+Portfolio data is collected via MCP server tools that handle broker
+authentication, account discovery, and snapshot capture.
 
-### Tradeville (4-step workflow)
-
-1. **`tradeville_login`** — Instructions to run login script in a terminal (MCP stdin is reserved for JSON-RPC; login must happen outside MCP).
-2. **`tradeville_discover`** — Opens browser with CDP port for Claude to navigate. Claude calls `tradeville_save_sub_account` for each sub-account found, then calls `tradeville_finish_discover` to close the browser.
-3. **`tradeville_set_active_account`** — Set which sub-account to use for routine snapshots.
-4. **`tradeville_snapshot`** — Auto-approvable. Loads active sub-account URL, saves screenshot + JSON.
-
-### IBKR
-
-1. **`ibkr_login`** — Opens visible browser for Client Portal Gateway auth (requires gateway at localhost:5000).
-2. **`ibkr_snapshot`** — Auto-approvable. Calls REST API, saves positions + NAV to JSON.
-
-### Status check
-
-```
-portfolio_status  — shows auth state, discovered URL, recent snapshots
-```
+Use the portfolio MCP tools to log in, discover sub-accounts,
+set active accounts, and take snapshots. Check `portfolio_status`
+for auth state and recent snapshots.
 
 Data dir: `~/.claude/local/portfolio/` (or `$PORTFOLIO_DATA_DIR`).
 
@@ -157,9 +134,9 @@ Data dir: `~/.claude/local/portfolio/` (or `$PORTFOLIO_DATA_DIR`).
 | Trigger | Action |
 |---------|--------|
 | User asks "what's in my portfolio?" | Read latest snapshots, present unified view |
-| Before investment decision (task #36, #39) | Read current positions to avoid duplication/overconcentration |
+| Before investment decision | Read current positions to avoid duplication/overconcentration |
 | Macro indicator changes significantly | Cross-reference positions with macro-monitor data |
-| User asks about specific position | Find it across both brokers, show details |
+| User asks about specific position | Find it across brokers, show details |
 | User asks about allocation/exposure | Calculate sector/geography breakdown |
 
 ## Vasana
