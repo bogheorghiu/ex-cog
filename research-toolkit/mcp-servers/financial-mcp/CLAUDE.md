@@ -15,11 +15,16 @@
 
 ### Project Structure
 ```
-project/
-├── main_entry_point.py
-├── definitions/            # Schemas/interfaces (like headers)
-├── implementations/        # One file per function
-└── requirements.txt
+financial-mcp/
+├── financial_server.py      # MCP protocol handler + main_sync() entry point
+├── tool_definitions.py     # Function schemas (like headers)
+├── pyproject.toml          # Package config — enables uvx/pip install
+├── requirements.txt        # Dev dependencies
+├── cache/                  # Self-contained SQLite cache (no external PYTHONPATH needed)
+│   ├── __init__.py
+│   ├── config.py           # TTL, CACHE_DIR (~/.cache/financial-mcp by default)
+│   └── manager.py          # CacheManager with lazy DB init
+└── implementations/        # One file per tool
 ```
 
 ## Testing Preferences

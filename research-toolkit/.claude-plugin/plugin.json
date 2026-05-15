@@ -1,8 +1,8 @@
 {
   "name": "research-toolkit",
-  "version": "2.3.0",
-  "description": "Investigation protocols, research methodology hub, video/substack extraction, dialectic testing, frame rotation, iterative verification, financial analysis (STONK). Includes financial-mcp.",
+  "description": "Relentless self-reflexive dialectical thinking that questions its own premises. Investigation protocols (DIP, cui-bono), epistemic depth (text-deconstruction, negative-dialectical-spiral), dialectic testing, frame rotation, iterative verification, video/substack extraction. Includes financial-mcp, transparency-mcp.",
   "author": {
     "name": "bogheorghiu"
-  }
+  },
+  "version": "3.1.0"
 }

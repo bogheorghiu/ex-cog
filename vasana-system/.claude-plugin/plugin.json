@@ -1,8 +1,8 @@
 {
   "name": "vasana-system",
-  "version": "2.0.0",
-  "description": "Pattern recognition across unrelated contexts. Observe, record, test, and browse behavioral patterns. Includes relational-memory and edge-graph MCPs.",
+  "description": "Vasana System — pattern recognition across unrelated contexts. Observe, record, test, and browse behavioral patterns. Includes relational-memory and edge-graph MCPs for pattern persistence.",
   "author": {
     "name": "bogheorghiu"
-  }
+  },
+  "version": "2.3.1"
 }

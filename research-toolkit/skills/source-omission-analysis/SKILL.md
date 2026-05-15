@@ -7,6 +7,8 @@ description: "What is everyone NOT saying about this?" - After any multi-source 
 
 **Seed question:** *What is everyone NOT saying about this?*
 
+> *Relentless self-reflexive dialectical thinking that questions its own premises.*
+
 ## Core Principle
 
 What a source is silent about reveals its structural position more reliably than what it says. Every source occupies a position relative to power, funding, and ideology. That position determines what it can see — and what it structurally cannot or will not see.
@@ -136,13 +138,13 @@ A comprehensive tech/trade investigation covering the Trump-Xi summit made zero 
 >
 > **What silence revealed:** Wang Yi's "thorough preparations needed" and "remove unnecessary disruptions" language was clearly referencing Iran, but the report's probability distributions were calculated without this variable. *Source: china-critique.md, Source Omission Analysis*
 
-### Anthropic: Mrinank Sharma Resignation Omission (March 2026)
+### Corporate Positioning: Key Researcher Departure Omission (March 2026)
 
-An investigation of the Anthropic-Pentagon dispute omitted the resignation of Anthropic's head of safeguards research two weeks before RSP v3.0.
+An investigation of a company's public stance omitted the resignation of its head of safety research two weeks before a major policy release.
 
-> **Omission:** "Mrinank Sharma's resignation is the single biggest omission. The head of safeguards research quitting two weeks before RSP v3.0 with 'the world is in peril' is material evidence that should have been in the report." — Adversarial Critique, Anthropic assessment
+> **Omission:** The head of safety research departing with public concerns about the company's direction is material evidence. It was absent from the initial report entirely — the adversarial critique surfaced it.
 >
-> **What silence revealed:** The omission protected the "Anthropic standing up for safety" narrative. Including Sharma's departure would have materially weakened the "genuinely principled" probability assessment (revised down from 70-80% to 55-70% after the critique surfaced it). *Source: anthropic-critique.md, Source Omission Analysis*
+> **What silence revealed:** The omission protected the "company standing up for safety" narrative. Including the departure materially weakened the "genuinely principled" probability assessment (revised down from 70-80% to 55-70% after the critique surfaced it).
 
 ## Integration
 
@@ -152,7 +154,7 @@ This skill connects to the research-toolkit ecosystem:
 |-------|-------------|
 | **deep-investigation-protocol** | Use omission analysis after Stage 2 (Flow Tracing) to identify gaps in the evidence chain |
 | **iterative-verification** | Omissions can downgrade evidence tiers — if only one source position reports a claim, it stays ALLEGED until independently verified |
-| **stonk** | SOURCE_DIVERSITY_FRAMEWORK provides source position examples; omission analysis is the complementary technique |
+| **cui-bono** | SOURCE_DIVERSITY_FRAMEWORK provides source position examples; omission analysis is the complementary technique |
 | **frame-rotation** | When omission analysis reveals a blind spot, frame-rotation can shift perspective to see what was hidden |
 | **manufactured-consensus-detection** | When all sources AGREE (opposite of omission), check for manufactured consensus |
 

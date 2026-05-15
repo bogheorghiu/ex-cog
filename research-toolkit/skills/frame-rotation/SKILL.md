@@ -14,6 +14,8 @@ Modify freely. Keep this section intact.
 
 # Frame-Rotation Protocol (语法透镜)
 
+> *Relentless self-reflexive dialectical thinking that questions its own premises.*
+
 ## Purpose
 
 English grammar pre-shapes which patterns become visible. Frame-rotation uses translation friction to expose structures invisible to English-native cognition.

@@ -11,6 +11,8 @@ description: >-
 
 **Seed question:** *Am I agreeing because it SOUNDS right, or because it IS right?*
 
+> *Relentless self-reflexive dialectical thinking that questions its own premises.*
+
 Generate the EXACT OPPOSITE of your synthesis. Not "a different view" — the opposite. Then test whether reality supports it.
 
 ## The Spiral (Recursive)
@@ -70,23 +72,24 @@ WHILE (synthesis has not survived its own opposite):
 
 ## Example: How the Spiral Produces New Understanding
 
-The examples below are illustrative of the dialectic process, drawn from investigations at the time of writing (March 2026). Specific factual claims may have evolved since.
+The examples below are illustrative of the dialectic process, abstracted from real investigations. The point is the *mechanism* — how generating the opposite produces understanding no single source articulated.
 
-From the March 2026 Anthropic-Pentagon investigation:
+**Example 1: Company positioning analysis**
 
-**Original synthesis:** "Anthropic's stand is both principled AND strategic (equally)"
+**Original synthesis:** "Company X's stance is both principled AND strategic (equally)"
 
 **Round 4 (generating the opposite):** Tested "strategy dominant, principle subordinate":
-- RSP v3.0 timing (released as Pentagon partnership deepened)
-- Head of safeguards research (Sharma) resigned 2 weeks before RSP v3.0
-- Red lines selected for deniability, not maximum protection
+- Policy release timing correlated with partnership deepening
+- Key safety researcher resigned weeks before the policy
+- Stated red lines optimized for deniability, not maximum protection
 
 **Result:** Revised to "strategy dominant (~60-65%), principle subordinate (~35-40%)" — a position no single source had articulated. It was *produced* by the dialectic, not found.
 
-Another example from the Iran assessment:
-- **Original claim:** "Rally around the flag" — Khamenei assassination created national unity
-- **Round 4 counter-evidence:** Celebrations in 7+ Iranian cities, 30,000+ killed in December 2025 protest crackdown
-- **Result:** Changed to "DEEPLY POLARIZED (Not 'Rally Around the Flag')" — the single largest analytical correction
+**Example 2: Political crisis assessment**
+
+- **Original claim:** "Rally around the flag" — a leadership crisis created national unity
+- **Round 4 counter-evidence:** Celebrations in multiple cities, mass protests violently suppressed in prior months
+- **Result:** Changed to "DEEPLY POLARIZED (Not 'Rally Around the Flag')" — the single largest analytical correction. The original framing reproduced the regime's narrative uncritically.
 
 ## Self-Reflexivity
 
@@ -100,7 +103,7 @@ The dialectic spiral is itself a framework with blind spots:
 ## Cross-References
 
 - **Invoked by:** adversarial-critic agent
-- **Referenced by:** DIP, STONK, youtube-research, substack-research (as escalation target)
+- **Referenced by:** DIP, cui-bono, youtube-research, substack-research (as escalation target)
 - **Standalone use:** Invoke directly for any analysis needing adversarial depth
 - **Depth calibration:** See `reference/topic-based-escalation.md` for when to apply full vs light spirals
 

@@ -7,6 +7,8 @@ description: "Are these sources agreeing independently, or echoing the same orig
 
 **Seed question:** *Are these sources agreeing independently, or echoing the same origin?*
 
+> *Relentless self-reflexive dialectical thinking that questions its own premises.*
+
 ## Core Principle
 
 Consensus is evidence — but only when it is genuine. When multiple "independent" sources agree, this can mean the claim is true (genuine consensus), OR that a single source successfully propagated its framing to others (manufactured consensus), OR that everyone is making the same cognitive error (groupthink/confirmation bias).
@@ -198,7 +200,7 @@ Effective corporate PR created the appearance of independent consensus around a 
 | **iterative-verification** | Convergence Warning Protocol (Section in iterative-verification) triggers this skill; this skill provides the detailed detection methodology |
 | **deep-investigation-protocol** | Affiliate/SEO Gaming Detection is a product-domain instance of manufactured consensus; this skill generalizes the pattern |
 | **source-omission-analysis** | Complementary — omission analysis maps what sources DON'T say; this skill tests what they DO say in unison |
-| **stonk** | Contradiction Analysis methods (Direct, Deductive, Falsification, Standpoint) apply to testing whether consensus survives challenge |
+| **cui-bono** | Contradiction Analysis methods (Direct, Deductive, Falsification, Standpoint) apply to testing whether consensus survives challenge |
 | **frame-rotation** | When manufactured consensus is detected, frame-rotation helps find the perspective that the manufactured narrative was designed to displace |
 
 **Workflow position:** Invoke when convergence warning fires during iterative-verification, OR when the source-omission-analysis reveals that everyone is saying the same thing. Run BEFORE accepting consensus as evidence in the dialectic spiral.

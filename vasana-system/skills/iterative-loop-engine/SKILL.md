@@ -75,6 +75,7 @@ Each domain requires:
 - Source independence requirements
 - **Promise:** `ALL FALSIFICATION CRITERIA PASS`
 - **Based on:** Original ralph-loop use case
+- **Enhanced:** See `self-improving-investigation` for blind worker + dialectic methodology
 
 ### Programming (`criteria/programming.criteria.md`)
 - Code quality verification

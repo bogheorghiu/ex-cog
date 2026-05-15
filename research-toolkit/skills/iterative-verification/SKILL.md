@@ -9,6 +9,8 @@ changelog:
 
 **Seed question:** *Is this ACTUALLY verified, or did I just say it is?*
 
+> *Relentless self-reflexive dialectical thinking that questions its own premises.*
+
 ## Core Principle
 
 Ralph-wiggum = iterative workflows.
