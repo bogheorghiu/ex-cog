@@ -13,10 +13,10 @@
 
 ```bash
 # 1. Add HTTP transport (see Phase 1.1 below for code)
-# Edit server.py to support dual transport (stdio + HTTP)
+# Edit financial_server.py to support dual transport (stdio + HTTP)
 
 # 2. Test locally
-MCP_TRANSPORT=http MCP_PORT=3000 python server.py
+MCP_TRANSPORT=http MCP_PORT=3000 python financial_server.py
 
 # 3. Push to GitHub
 git add .
@@ -51,7 +51,7 @@ This server currently uses `stdio` transport (subprocess-based, local only). To 
 
 ## Phase 1: Add HTTP Transport Support
 
-### 1.1 Update server.py
+### 1.1 Update financial_server.py
 
 **Current implementation** (stdio):
 ```python
@@ -118,13 +118,13 @@ May need to verify HTTP support is included in current MCP SDK version.
 
 ```bash
 # Test HTTP mode locally
-MCP_TRANSPORT=http MCP_PORT=3000 python server.py
+MCP_TRANSPORT=http MCP_PORT=3000 python financial_server.py
 
 # Test connection (in another terminal)
 curl http://localhost:3000
 
 # Test stdio mode still works
-python server.py
+python financial_server.py
 ```
 
 ---
@@ -154,7 +154,7 @@ ENV MCP_HOST=0.0.0.0
 ENV MCP_PORT=3000
 
 # Run server
-CMD ["python", "server.py"]
+CMD ["python", "financial_server.py"]
 ```
 
 ### 2.2 Create .dockerignore
@@ -266,7 +266,7 @@ fly deploy
 3. Connect GitHub repo
 4. Configure:
    - Build: `pip install -r requirements.txt`
-   - Start: `python server.py`
+   - Start: `python financial_server.py`
    - Environment vars: `MCP_TRANSPORT=http`
 5. Deploy
 
@@ -422,7 +422,7 @@ jobs:
 ### 7.1 Add authentication
 
 ```python
-# In server.py - add middleware for API key validation
+# In financial_server.py - add middleware for API key validation
 from starlette.middleware import Middleware
 from starlette.middleware.authentication import AuthenticationMiddleware
 
@@ -460,7 +460,7 @@ from slowapi import Limiter
 ## Implementation Timeline
 
 ### Minimal viable deployment (1-2 hours)
-1. Add HTTP transport to server.py (15 min)
+1. Add HTTP transport to financial_server.py (15 min)
 2. Test locally (15 min)
 3. Deploy to Railway (30 min)
 4. Configure Claude Code (15 min)
@@ -495,7 +495,7 @@ If deployment fails or issues arise:
 
 1. **Keep stdio version working** - dual transport ensures local version still functions
 2. **Remove remote server** from Claude Code config
-3. **Debug locally** using HTTP mode: `MCP_TRANSPORT=http python server.py`
+3. **Debug locally** using HTTP mode: `MCP_TRANSPORT=http python financial_server.py`
 4. **Check logs** in hosting dashboard
 5. **Test with curl** before connecting Claude
 

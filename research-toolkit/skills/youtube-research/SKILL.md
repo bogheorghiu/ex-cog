@@ -173,8 +173,8 @@ def should_continue():
 
 Consult `reference/topic-based-escalation.md` when extracted content touches:
 - Safety/trust claims → suggest DIP
-- Power structures / "who benefits" → suggest STONK
-- Geopolitical/military → suggest DIP + STONK lenses
+- Power structures / "who benefits" → suggest cui-bono
+- Geopolitical/military → suggest DIP + cui-bono lenses
 - Contrarian single-source → suggest dialectic-spiral (full) + iterative-verification
 
 Mid-research escalation is a suggestion, not automatic. Note it and let the user decide.
@@ -217,7 +217,8 @@ Mid-research escalation is a suggestion, not automatic. Note it and let the user
 
 - **video-transcript-extraction** — called for Phase 2 (transcript acquisition)
 - **deep-investigation-protocol** — escalation target for trust/safety topics
-- **stonk** — escalation target for power/investment topics
+- **cui-bono** — escalation target for power analysis topics
+- **stonk** agent — escalation target when financial dimension needed
 - **dialectic-spiral** — used when findings need stress-testing
 - **reference/topic-based-escalation.md** — shared escalation logic
 

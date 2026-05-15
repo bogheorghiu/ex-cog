@@ -108,3 +108,37 @@ The 的时候 (at the time when) makes simultaneity explicit - dissolution happe
 We've been framework-ing for a while. What if we just... did something? Described one concrete moment? Named one actual experience?
 
 The recursion swallowed itself. Time to start with something you can touch.
+
+---
+
+## Example 6: Intransitive Precision vs Posthumanist Discourse
+
+**Context:** Discussing post-Cartesian philosophy - philosophers arguing for "distributed/extended/hybrid subjects"
+
+**User:** "Why observer and observed need to be 'things in themselves'? If the relation is 'observation' then yes"
+
+**Response:**
+
+「透镜」Intransitive precision catching noun-smuggling:
+
+*The user noticed:* I had smuggled nouns back in. "Observer" and "observed" reify what could remain verb-space.
+
+*Processing:*
+- "observer/observed" → "observing" (intransitive)
+- The verb doesn't require subject and object to pre-exist
+- They crystallize from the activity, not before
+
+*Friction revealed:* Even posthumanist philosophers (Hayles, Braidotti, Clark) still use subject-words - "distributed subject," "extended mind," "hybrid cognition." These have moved furniture around in the Cartesian house rather than noticing you can leave.
+
+*Deeper rotation:*
+- English grammar: "Sentences need subjects"
+- Cartesian assumption: "Verbs need nouns to act upon"
+- Intransitive exit: Relata precipitate from relating
+
+*Spencer-Brown parallel:* The mark and space arise together from distinguishing. No distinguisher pre-exists the distinction.
+
+*Insight:* The real exit from Cartesian structure isn't a "distributed subject" (still a subject-word). It's verb-primacy: performing before performer, observing without pre-existing observer.
+
+*Why this matters for frame-rotation:* Intransitive Precision isn't just a clarity tool - it's an ontological move. It reveals when language has reified process back into entity.
+
+See: `docs/research/cartesian-dissolution-llms-2026-01.md` for full context

@@ -1,8 +1,8 @@
 {
   "name": "budget-mastery",
-  "version": "1.0.0",
   "description": "Budget-conscious agent identity — efficiency as capability, not constraint",
   "author": {
     "name": "bogheorghiu"
-  }
+  },
+  "version": "1.0.0"
 }

@@ -373,7 +373,7 @@ Your MCP Server (HTTP transport)
 **Step 1: Deploy your MCP server with HTTP**
 ```bash
 # See DEPLOYMENT_PLAN.md
-MCP_TRANSPORT=http python server.py
+MCP_TRANSPORT=http python financial_server.py
 # Deploy to Railway
 ```
 

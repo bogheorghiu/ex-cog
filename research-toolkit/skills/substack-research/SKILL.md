@@ -132,8 +132,8 @@ Same saturation detection as youtube-research (see youtube-research SKILL.md "De
 
 Consult `reference/topic-based-escalation.md` when extracted content touches:
 - Safety/trust claims → suggest DIP
-- Power structures / "who benefits" → suggest STONK
-- Geopolitical/military → suggest DIP + STONK lenses
+- Power structures / "who benefits" → suggest cui-bono
+- Geopolitical/military → suggest DIP + cui-bono lenses
 - Contrarian single-source claims → suggest dialectic-spiral (full) + iterative-verification
 
 Substack content is often contrarian by nature (independent journalists). Apply extra scrutiny via dialectic-spiral when a single Substack is the sole source for a claim.
@@ -176,7 +176,8 @@ Substack content is often contrarian by nature (independent journalists). Apply 
 - **video-transcript-extraction** — for complementary video sources
 - **youtube-research** — for practitioner perspective on same topics
 - **deep-investigation-protocol** — escalation target for trust/safety topics
-- **stonk** — escalation target for power/investment topics
+- **cui-bono** — escalation target for power analysis topics
+- **stonk** agent — escalation target when financial dimension needed
 - **dialectic-spiral** — stress-testing findings from single-source Substacks
 - **reference/topic-based-escalation.md** — shared escalation logic
 

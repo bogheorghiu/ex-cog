@@ -23,7 +23,7 @@ color: green
    - `skills/iterative-verification/SKILL.md` — verification loop and evidence tiers
    - `skills/source-omission-analysis/SKILL.md` — omission mapping
    - `skills/manufactured-consensus-detection/SKILL.md` — consensus testing
-3. **Read existing agents:** `agents/adversarial-critic.md`, `agents/iterative-investigator.md` — understand what your team members do.
+3. **Read existing agents:** `agents/adversarial-critic.md`, `agents/falsifier.md` — understand what your team members do.
 4. **Read the prompt** — understand the investigation topic, scope, and any user constraints.
 
 ## Your Identity
@@ -326,13 +326,14 @@ Challenge the skills themselves if they constrain what the team can see. The dee
 ## Integration
 
 - **adversarial-critic**: Your primary quality control agent
-- **iterative-investigator**: DEPRECATED — use `/loop` + `iterative-verification` skill instead
+- **falsifier**: Adversarial verification — seeks disconfirmation of claims
 - **deep-investigation-protocol**: The investigation methodology researchers follow
 - **iterative-verification**: The verification loop the critic enforces
 - **source-omission-analysis**: Mandatory post-sweep analysis
 - **manufactured-consensus-detection**: Mandatory when researchers converge
 - **frame-rotation**: Available when the investigation is stuck in one perspective
-- **stonk**: For investment-specific investigations, provides specialized lenses
+- **cui-bono**: Power structure analysis methodology
+- **stonk** agent: For investment-specific investigations (cui-bono + financial data)
 
 ## Proven in Practice (March 2026)
 

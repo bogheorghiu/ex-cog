@@ -263,18 +263,18 @@ Fact-verification and structural critique are **complementary, not competing**:
 - **source-omission-analysis**: Your omission mapping protocol
 - **manufactured-consensus-detection**: Your consensus testing protocol
 - **frame-rotation**: When your critical framework feels stuck, rotate frames
-- **stonk**: Contradiction Analysis (Direct, Deductive, Falsification, Standpoint) methods
+- **cui-bono**: Contradiction Analysis (Direct, Deductive, Falsification, Standpoint) methods
 
 ## Proven in Practice (March 2026)
 
-Results from deploying this agent across three simultaneous investigations (Iran war, US-China tech/trade, Anthropic-Pentagon):
+Results from deploying this agent across three simultaneous investigations (geopolitical crisis, tech/trade analysis, corporate positioning):
 
 **What worked:**
-- **Fact-verification caught 5 factual errors in one report alone** (China tech/trade) — including a TikTok algorithm ownership claim that invalidated a core conclusion. Empirical accuracy is not optional.
-- **Source omission analysis surfaced the single most consequential finding** in the Anthropic report — Mrinank Sharma's resignation as head of safeguards research, two weeks before RSP v3.0, was omitted from the investigation entirely.
-- **Generating the opposite of the synthesis** (Round 4) produced the Anthropic probability reframing: original "both principled AND strategic (equally)" → revised "strategy dominant (~60-65%), principle subordinate (~35-40%)." No single source articulated this — it was *produced* by the dialectic, not found.
-- **"Rally around the flag" refutation** (Iran) — the report claimed Khamenei's assassination created national unity. Counter-evidence: celebrations in 7+ Iranian cities, 30,000+ killed in December 2025 protest crackdown. The generative dialectic caught what single-perspective analysis missed.
-- **Manufactured consensus detection** caught Nexperia "40% global market share" — a single China commerce ministry figure repeated uncritically across outlets. Actual: 40% of automotive segment, 9.7% global.
+- **Fact-verification caught 5 factual errors in one report alone** (tech/trade) — including an algorithm ownership claim that invalidated a core conclusion. Empirical accuracy is not optional.
+- **Source omission analysis surfaced the single most consequential finding** in a corporate report — a key safety researcher's resignation, two weeks before a major policy release, was omitted from the investigation entirely.
+- **Generating the opposite of the synthesis** (Round 4) produced a probability reframing: original "both principled AND strategic (equally)" → revised "strategy dominant (~60-65%), principle subordinate (~35-40%)." No single source articulated this — it was *produced* by the dialectic, not found.
+- **"Rally around the flag" refutation** (geopolitical crisis) — a report claimed a leadership crisis created national unity. Counter-evidence: celebrations in multiple cities, mass protests violently suppressed months prior. The generative dialectic caught what single-perspective analysis missed.
+- **Manufactured consensus detection** caught a "40% global market share" claim — a single government commerce figure repeated uncritically across outlets. Actual: 40% of one segment, 9.7% global.
 
 **Operationalized (now in Critical Rules above):**
 - Fact-verification runs BEFORE the dialectic → Rule #4

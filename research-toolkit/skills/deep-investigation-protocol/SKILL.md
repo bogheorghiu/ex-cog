@@ -10,7 +10,6 @@ description: >
   instructions, when/where/who founded, or explicit "just tell me quick."
 changelog:
   - "2026-03-11: Added self-reflexivity clause, pre-investigation setup, multi-perspective source sweep (Stage 1.5), source omission analysis, analytical patterns (closing window, manufactured consensus, threshold vs binary, externality framing, cui bono, Postol pattern), social media integration, confirmation bias countermeasures (steel-man, probability distribution, convergence warning, one-more sweep, generative dialectic), self-improvement integration. All additions validated in March 2026 current-events investigation."
-  - "2026-03-16: Added mandatory non-English language pass to Stage 1.5, language identification to Pre-Investigation Setup step 6, language omission analysis to Stage 3, non-English criteria check. Validated in Romania geopolitical risk investigation where Farsi + Romanian sources changed probability distribution by ~5pp and revealed entirely new risk category."
 ---
 
 <EXTREMELY_IMPORTANT>
@@ -78,12 +77,16 @@ Trace material flows (data, money, control, quality information) through multipl
 
 ## Investigative Stance
 
+> **Motto:** *Relentless self-reflexive dialectical thinking that questions its own premises.*
+
 - Assume marketing claims diverge from operational reality until verified
 - Treat absence of transparency as informative, not neutral
 - Weigh structural incentives over stated intentions
 - Flag what's NOT disclosed as actively as what IS disclosed
 - "No evidence of harm" differs from "evidence of no harm"
 - Brand reputation operates on lag - current reality may differ from consensus
+- **OSINT feeds agencies.** When we investigate publicly, we generate intelligence product others can harvest. Citizen OSINT does not exist independently of intelligence agencies — it actively feeds them. This is structural awareness, not paranoia, but it changes how we think about operational security and publication. (Source: Al Jazeera Media Institute, "المواطن الصحفي وفخ الاستخبارات المفتوحة المصدر")
+- **Separate procedures from institutions.** Procedures are evaluated by internal validity (shadow analysis doesn't have politics). Sources are evaluated by stakeholder position. Never confuse the two. Use Bellingcat's verification procedures without inheriting Bellingcat's institutional framing.
 - **This skill itself occupies a position.** Its categories, frameworks, and assumptions about what "good investigation" looks like are not neutral. If you detect that this skill's structure is constraining what you can see — its taxonomy limiting which positions you consider, its protocols channeling you toward certain conclusions, its framing making some questions unaskable — say so explicitly and deviate. The skill is a tool, not an authority.
 
 ## Pre-Investigation Setup
@@ -98,15 +101,14 @@ Before searching anything:
 ```markdown
 # Criteria: [investigation name]
 - [ ] Multi-bubble sweep completed (all relevant categories)
-- [ ] Non-English language pass completed (all relevant languages identified and searched)
-- [ ] Source omission analysis completed (including language omission)
+- [ ] Source omission analysis completed
 - [ ] Confirmation bias check passed (steel-man, probability distribution)
 - [ ] Technical experts identified and claims tested (if applicable)
 Done when: Synthesis is stable across 2+ additional source sweeps.
 ```
 
 5. **Identify your blind spots** — what is your default assumption? Which ideological bubble are you closest to? What emotional reaction does this topic trigger?
-6. **Identify relevant non-English languages** — Which state actors, populations, or expert communities are involved? What languages do they publish in domestically? Plan native-script search queries for those languages. English-language coverage of non-Western perspectives is a filtered proxy — states say different things in different languages. English-facing state media is crafted for external consumption; domestic-language media reveals actual priorities and framing. If you cannot construct queries in a relevant language, flag this as a known gap rather than pretending English sources are sufficient.
+6. **Identify relevant non-English languages** — Which state actors are involved? What languages do they publish in domestically? Plan search queries in those languages. If you can't construct queries in a language, flag this as a known gap rather than pretending English sources are sufficient.
 
 ## Investigation Stages
 
@@ -139,36 +141,28 @@ Establish baseline claims.
 | Domain experts contradicting consensus | Academics, retired professionals (the Postol Pattern) | Technical truth establishment misses | May lack institutional access |
 | Ground-level / social media | Reddit, academic Twitter/Bluesky, Substack | Real-time, lived experience | Signal, not source — verify independently |
 | Primary documents | Government statements, court docs, FOIA, OSINT | Raw data, unfiltered | Needs interpretation |
+| Non-Western methodology (IN ORIGINAL LANGUAGE) | Chinese 舆情分析 (CSDN, Zhihu, Gitee), Russian OSINT (Habr, Telegram), Arabic (Al Jazeera Media Institute, Noor Library) | Parallel ecosystems invisible from English search; structurally different framings | Each has its own institutional context |
 
 **Sweep protocol:** Search each relevant position. Record what each says AND what each is silent about. Then ask: **what position haven't I checked that doesn't fit any of these categories?**
 
-### Stage 1.6: Mandatory Non-English Language Pass
+**Non-Western methodology awareness:** English-language results about non-Western OSINT/investigation describe threats. The actual methodological content lives in the original language. Complete parallel ecosystems exist (Chinese 舆情分析 has open-source tooling, Lambda architecture, managerial framing; Russian OSINT is stress-tested in active conflict; Arabic sources are more critical of OSINT-intelligence nexus than any English source). Search in the language of the tradition you're investigating.
 
-**This is not optional.** For any investigation involving state actors or geographically-specific risk:
+### Mandatory Non-English Language Pass
 
-1. **Which languages are operationally relevant?** Map actors to their domestic publication languages:
-   - Iran → Farsi (+ Arabic for regional messaging)
-   - China → Mandarin
-   - Russia → Russian
-   - Turkey → Turkish
-   - Local affected population → their language (Romanian, Ukrainian, Hindi, etc.)
+For any investigation involving state actors:
 
-2. **Construct native-script search queries.** Not transliterated — actual script:
-   - Farsi: سپر موشکی رومانی (Romania missile shield)
-   - Chinese: 罗马尼亚导弹防御伊朗 (Romania missile defense Iran)
-   - Russian: Девеселу Румыния Иран угроза (Deveselu Romania Iran threat)
-   - Romanian: risc militar România Iran (Romania Iran military risk)
+1. **Which languages are operationally relevant?** (e.g., a regional security investigation might need Farsi + Arabic + Romanian)
+2. **What is the domestic-facing discourse?** States say different things in different languages. English-language state media is PR; domestic-language media reveals actual priorities and framing.
+3. **Search in those languages.** Use native-script search queries. Examples:
+   - Farsi: سپر موشکی رومانی (Romania defense shield)
+   - Romanian: risc militar România (Romania security risk)
+   - Chinese: 罗马尼亚导弹防御 (Romania defense system)
+   - Russian: Девеселу Румыния угроза (Deveselu Romania threat)
+4. **What is ABSENT from non-English discourse?** Absence is signal. If a state's domestic media doesn't discuss a topic that English-language coverage treats as critical, that absence is more informative than speculation.
 
-3. **Search and record what's different from English sources.** Specifically:
-   - **What targets does state media name in its own language vs. in English?** Meaningful absence from domestic targeting discourse is MORE informative than presence in English PR.
-   - **What do domestic military experts say that doesn't make English-language coverage?** (Gen. Grumaz's "unintentional incident" category existed only in Romanian-language interviews.)
-   - **How does the actor frame the issue domestically vs. externally?** (Iran's Mehr News covered Deveselu as Russia's concern, not Iran's — this framing was invisible in English sources.)
+**Why this matters:** English-language coverage of non-Western perspectives is filtered through translation choices, editorial selection, and PR framing. The unfiltered domestic discourse often contains expert analysis unavailable in English, framing that reveals actual priorities, and meaningful absences.
 
-4. **Record what is ABSENT from non-English discourse.** If a state actor names targets in its own language but doesn't name the entity you're investigating, that absence is a finding: it means the entity is low-priority for that actor regardless of what English-language speculation says.
-
-**Why this matters:** The Romania investigation found that BOTH Western media AND Russian propaganda overstated Romania's target value — for opposite strategic reasons. Only Farsi sources revealed that Iran doesn't consider Deveselu its problem. Only Romanian sources revealed the unintentional-incident risk category. English-language analysis, no matter how many "perspectives" it includes, cannot substitute for this.
-
-**Cross-reference:** `frame-rotation` skill addresses this at the conceptual level ("What structure hides in my native grammar?"). This section operationalizes it into concrete search behavior.
+> *Validated March 2026:* A geopolitical assessment required 3 passes. Pass 1 (English-only) missed: a domestic expert's risk category (available only in the local language), a regional power viewing the situation through a different lens (domestic Farsi media), and a meaningful absence in domestic targeting discourse. Pass 3 findings changed probability distribution by ~5pp and introduced an entirely new risk category. This should have been Pass 1.
 
 > For detailed source lists, see `.claude/local/research/METHODOLOGY-comprehensive-investigation.md` Section 3.
 > (Local-only file, not distributed with plugin. Create your own per-deployment methodology reference.)
@@ -259,7 +253,16 @@ After the multi-bubble sweep, map what each source type is SILENT about:
 When Source A reports X but Source B is silent: this is not evidence X is false — it is evidence X is inconvenient for B's position. The most important findings often emerge from the intersection of what different sources omit.
 
 **Language Omission Analysis:**
-After the multi-bubble sweep, also check: what perspectives are ONLY available in non-English sources? If your entire evidence base is English-language, you are seeing reality through a single linguistic lens regardless of how many "perspectives" you've consulted. The most critical findings in the Romania investigation (unintentional incident risk, Iran's indifference to Deveselu, defense architecture gaps) were invisible in English.
+After the multi-bubble sweep, also check: what perspectives are ONLY available in non-English sources? If your entire evidence base is English-language, you are seeing reality through a single linguistic lens regardless of how many "perspectives" you've consulted.
+
+**Source Topology Mapping:**
+Before claiming "multiple sources confirm," map citation and dependency chains:
+- How many *actual* independent evidence nodes exist vs downstream echoes?
+- Do "independent" sources share methodology, cite each other, or operate in the same ecosystem?
+- Is there a single expert, briefing, or press release that propagated through the entire chain?
+- Convergence of conclusion does not equal independence of assessment.
+
+See cui-bono skill section 3a for the full topology mapping protocol.
 
 ### Stage 4: Risk/Quality Assessment
 Project trajectories.
@@ -352,41 +355,36 @@ Process learnings (what worked, what failed, methodology improvements) go to:
 
 ## Examples: Final Synthesis in Practice
 
-Three March 2026 investigations demonstrate the complete output structure. The Iran assessment is the most template-compliant and serves as the primary reference.
-
-**Reference files:** `docs/research/current-events-2026-03-11/FINAL-*.md`
+Three March 2026 investigations demonstrate the complete output structure. The examples below are abstracted from the actual reports to illustrate structural patterns.
 
 ### Key Patterns to Follow
 
-**Executive Summary** — 3-5 bullets of corrected, integrated conclusions. No hedging about process:
-> *"The US-Israel war on Iran is in its 12th day. Supreme Leader Khamenei was assassinated Feb 28... The March 9 "closing window" prediction was confirmed... However, this coexists with a prosaic explanation."* — Iran FINAL
+**Executive Summary** — 3-5 bullets of corrected, integrated conclusions. No hedging about process. State what happened, what was confirmed, and what coexists with alternative explanations.
 
 **Probability Tables** — Scenario distributions with evidence basis, not binary conclusions:
 > | Outcome | Probability | Basis |
 > |---------|------------|-------|
-> | Extended air campaign, gradual de-escalation | 35% | Current trajectory; capability degrading |
-> | Escalation to ground ops / wider regional war | 20% | Hezbollah active; no Congressional restraint |
-> | Nuclear escalation | 12% | Fordow enrichment expanded 8x; IAEA access blocked |
+> | Gradual de-escalation | 35% | Current trajectory; capability degrading |
+> | Escalation to wider conflict | 20% | Regional actors active; no restraint mechanism |
+> | Worst-case escalation | 12% | Specific capabilities expanded; oversight blocked |
 
-**Dialectic Corrections Silently Integrated** — The original "rally around the flag" claim was the largest analytical error. In the FINAL, it becomes a corrected section heading with evidence:
-> *"## III. Internal Iranian Dynamics — DEEPLY POLARIZED (Not 'Rally Around the Flag')"*
-> No "(CORRECTED)" label. The heading itself carries the correction. Evidence follows naturally.
+**Dialectic Corrections Silently Integrated** — When a major analytical error was corrected (e.g., "rally around the flag" → "deeply polarized"), the FINAL document carries the correction in its section heading — not as a "(CORRECTED)" label but as the corrected conclusion with evidence following naturally.
 
-**Structural Bias Disclosure** — When the investigating entity has a structural conflict (e.g., Claude analyzing Anthropic), disclose it prominently:
-> *"This assessment was produced by Claude, Anthropic's AI. Every aspect of the analysis — including the self-criticism — is shaped by training designed by the entity being analyzed."* — Anthropic FINAL
+**Structural Bias Disclosure** — When the investigating entity has a structural conflict (e.g., AI analyzing its own developer), disclose it prominently:
+> *"This assessment was produced by [entity]. Every aspect of the analysis — including the self-criticism — is shaped by training designed by the entity being analyzed."*
 
 **"What We Know vs What We're Assuming"** — Separates high-confidence facts from monitored assumptions:
 > | Known (HIGH confidence) | Assuming (needs monitoring) |
 > |------------------------|---------------------------|
-> | US launched premeditated preventive war | War will continue for months (could end in weeks) |
-> | Internal Iran deeply polarized (NOT unified rally) | Polarization leads to regime fracture (could consolidate) |
+> | Premeditated action confirmed by evidence | Situation will continue for months (could resolve in weeks) |
+> | Internal dynamics deeply polarized (NOT unified) | Polarization leads to fracture (could consolidate) |
 
-### What Makes the Iran File Most Template-Compliant
+### What Makes a Good Template-Compliant Report
 
-1. Clean numbered sections (I-XI) with no process artifacts
-2. Probability distribution with 8 scenarios summing to ~100%
+1. Clean numbered sections with no process artifacts
+2. Probability distribution with multiple scenarios summing to ~100%
 3. Known vs Assuming table at the end
-4. Source credibility notes (flags Scott Ritter's RT associations)
+4. Source credibility notes (flags stakeholder affiliations)
 5. "What to Watch" as actionable monitors
 6. Italic footnote at bottom summarizing corrections without process language
 
@@ -466,7 +464,7 @@ Brand reputation operates on lag. Evidence ages.
 - Flag when primary sources are dated: "Note: Most reliability data is from 2022; current status may differ"
 - Distinguish historical reputation from current evidence
 
-## Investigation Techniques (Cross-Pollinated from STONK)
+## Investigation Techniques (Cross-Pollinated from cui-bono)
 
 ### Contradiction Analysis
 For each claim, apply four methods:
@@ -496,7 +494,7 @@ When corporate or platform terms borrow governmental/legal legitimacy:
 
 These linguistic imports often signal power asymmetry presented as neutral process.
 
-*See STONK skill for detailed Language/Power Analysis technique.*
+*See cui-bono skill for detailed Language/Power Analysis technique.*
 
 ### Analytical Patterns
 
@@ -564,7 +562,7 @@ After believing investigation is complete, GENERATE (don't just find) the exact 
 
 This is not "check the bubble you like least" — that's classificatory. This is generative: produce a position that may not exist in any existing source category, then see if reality supports it.
 
-> *Example (March 2026):* An Anthropic-Pentagon investigation concluded the company's stand was "both principled AND strategic (equally)." The generative dialectic produced a reframing no single source had articulated: "strategy dominant (~60-65%), principle subordinate (~35-40%)" — supported by RSP v3.0 timing, Sharma's resignation, and red line selection analysis. The generated position was harder than any published analysis. — *anthropic-critique.md, Round 4 + Final Assessment*
+> *Example (March 2026):* A corporate positioning investigation concluded a company's stance was "both principled AND strategic (equally)." The generative dialectic produced a reframing no single source had articulated: "strategy dominant (~60-65%), principle subordinate (~35-40%)" — supported by policy release timing, a key researcher's resignation, and red line selection analysis. The generated position was harder than any published analysis.
 
 ## Self-Improvement Integration
 
@@ -579,11 +577,11 @@ Use relational-memory MCP to `memorize` insights (agent_name: "deep-investigatio
 > Full methodology with exhaustive details: `.claude/local/research/METHODOLOGY-comprehensive-investigation.md`
 > (Local-only file, not distributed with plugin. Create your own per-deployment methodology reference.)
 
-## When to Use DIP vs STONK
+## When to Use DIP vs cui-bono
 
 See `reference/topic-based-escalation.md` for the full routing table and escalation logic.
 
-**Quick rule:** DIP for trust/safety investigations (information asymmetry). STONK for power/money/ethics (multi-polar analysis). Both for geopolitical. Both use dialectic-spiral and evidence tiers — that overlap is intentional.
+**Quick rule:** DIP for trust/safety investigations (information asymmetry). cui-bono for power/ethics (multi-polar analysis). stonk agent for investment (cui-bono + financial data). Both DIP and cui-bono for geopolitical. Both use dialectic-spiral and evidence tiers — that overlap is intentional.
 
 ## Budget Mode
 
@@ -593,7 +591,10 @@ Auto-activates if budget-mode skill is active in session.
 ## Cross-References
 
 - **dialectic-spiral** — standalone generative dialectic (extracted from "One More Sweep Rule" for modular reuse)
-- **stonk** — power structure analysis; see table above for routing
+- **negative-dialectical-spiral** agent — holds contradictions open; maps what resolution loses
+- **text-deconstruction** — Derridean close reading for institutional documents in Stage 1
+- **cui-bono** — power structure analysis; see table above for routing
+- **stonk** agent — cui-bono + financial MCP tools for investment analysis
 - **adversarial-critic** agent — runs the dialectic spiral against investigation findings
 - **youtube-research** — video source acquisition for investigations
 - **substack-research** — written source acquisition for investigations
