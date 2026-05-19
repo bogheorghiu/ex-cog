@@ -18,6 +18,11 @@
       "name": "vasana-system",
       "source": "./vasana-system",
       "description": "Pattern recognition across unrelated contexts. Observe, record, test, and browse behavioral patterns. Includes relational-memory and edge-graph MCPs."
+    },
+    {
+      "name": "security-toolkit",
+      "source": "./security-toolkit",
+      "description": "Prompt-injection detection hook with tiered HIGH/LOW confidence and env-var-driven allowlist. Covers MCP tool outputs via the * matcher. (Stable subset; full plugin with git/Desktop-Commander blocking lives in bogheorghiu/ex-cog-dev.)"
     }
   ]
 }
