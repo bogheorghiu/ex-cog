@@ -1,0 +1,13 @@
+{
+  "PostToolUse": [
+    {
+      "matcher": "*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/detect-prompt-injection.sh\""
+        }
+      ]
+    }
+  ]
+}
