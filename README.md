@@ -2,6 +2,16 @@
 
 > Externalize cognition before it's enclosed.
 
+CURRENT MARKETPLACE AT
+https://github.com/bogheorghiu/ex-cog-dev
+THIS REPO IS NO LONGER UPDATED
+
+Use the -dev one for now, until it's polished enough to release otherwise. A lot of the features are experimental and marked as such. 
+
+The README text below belongs to an old form of the repo.
+
+---
+
 A.I. doesn't make humanity obsolete. It makes the myth of individual cognition obsolete — the Cartesian fiction that thinking happens inside one skull. Cognition was always relational. A.I. just makes it visible — and makes cognitive commons possible.
 
 Plugin marketplace for Claude Code and Claude Cowork — investigation, verification, pattern recognition, budget-conscious synthesis.
